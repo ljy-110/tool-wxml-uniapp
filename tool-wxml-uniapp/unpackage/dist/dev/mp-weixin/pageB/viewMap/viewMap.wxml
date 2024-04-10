@@ -1,0 +1,1 @@
+<view class="data-v-010de245"><view class="page-section page-section-gap data-v-010de245" id="container"><map class="map data-v-010de245" style="width:100%;height:100vh;" latitude="{{localInfo.lat}}" longitude="{{localInfo.lng}}" markers="{{covers}}" theme="satellite" scale="{{scaleMap}}" show-location="{{true}}"></map></view></view>

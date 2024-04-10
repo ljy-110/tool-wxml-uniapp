@@ -1,0 +1,98 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/tool/tool",
+    "pages/word/word",
+    "pages/wordInfo/wordInfo",
+    "pages/weather/weather",
+    "pages/learn/learn",
+    "pages/mApi/mApi"
+  ],
+  "subPackages": [
+    {
+      "root": "pageB",
+      "pages": [
+        "searchIP/searchIP",
+        "viewMap/viewMap",
+        "moreWeather/moreWeather",
+        "addressRes/addressRes",
+        "randomPattern/randomPattern",
+        "KingHonor/KingHonor",
+        "randomWord/randomWord",
+        "randomSong/randomSong",
+        "randomDOG/randomDOG",
+        "randomBrains/randomBrains",
+        "vocabulary/vocabulary",
+        "sketch/sketch",
+        "neteaseCloud/neteaseCloud",
+        "profilePhoto/profilePhoto",
+        "playlet/playlet",
+        "novelSearch/novelSearch",
+        "proverb/proverb",
+        "cartoon/cartoon",
+        "cartoonSeries/cartoonSeries",
+        "cartoonVideo/cartoonVideo",
+        "musicSearch/musicSearch",
+        "qqMusic/qqMusic",
+        "kuaikanComics/kuaikanComics",
+        "wyMusic/wyMusic",
+        "phrase/phrase",
+        "polymerizationWord/polymerizationWord",
+        "historyLearn/historyLearn",
+        "translate/translate",
+        "horoscope/horoscope",
+        "overlord/overlord"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#1296db",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/weather/weather",
+        "iconPath": "/static/image/weater.png",
+        "selectedIconPath": "/static/image/weater-a.png",
+        "text": "天气"
+      },
+      {
+        "pagePath": "pages/learn/learn",
+        "iconPath": "/static/image/weater.png",
+        "selectedIconPath": "/static/image/weater-a.png",
+        "text": "学习"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/static/image/tool.png",
+        "selectedIconPath": "/static/image/tool-a.png",
+        "text": "操作台"
+      },
+      {
+        "pagePath": "pages/word/word",
+        "iconPath": "/static/image/word.png",
+        "selectedIconPath": "/static/image/word-a.png",
+        "text": "文章"
+      },
+      {
+        "pagePath": "pages/mApi/mApi",
+        "iconPath": "/static/image/word.png",
+        "selectedIconPath": "/static/image/word-a.png",
+        "text": "API"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取地方天气"
+    }
+  },
+  "usingComponents": {}
+}

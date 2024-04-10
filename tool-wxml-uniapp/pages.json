@@ -1,0 +1,353 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uni_modules/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"resizable":false,
+	"pageOrientation":"portrait",
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "开发工具"
+			}
+		},
+		{
+			"path" : "pages/tool/tool",
+			"style" : 
+			{
+				"navigationBarTitleText" : "工具",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/word/word",
+			"style" : 
+			{
+				"navigationBarTitleText" : "文章",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/wordInfo/wordInfo",
+			"style" : 
+			{
+				"navigationBarTitleText" : "文章详情",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/weather/weather",
+			"style" : 
+			{
+				"navigationBarTitleText" : "天气",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/learn/learn",
+			"style" : 
+			{
+				"navigationBarTitleText" : "学习",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/mApi/mApi",
+			"style" : 
+			{
+				"navigationBarTitleText" : "免费API",
+				"enablePullDownRefresh" : false
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#1296db",
+		"borderStyle": "white",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/weather/weather",
+				"iconPath": "/static/image/weater.png",
+				"selectedIconPath": "/static/image/weater-a.png",
+				"text": "天气"
+			},
+			{
+				"pagePath": "pages/learn/learn",
+				"iconPath": "/static/image/weater.png",
+				"selectedIconPath": "/static/image/weater-a.png",
+				"text": "学习"
+			},
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "/static/image/tool.png",
+				"selectedIconPath": "/static/image/tool-a.png",
+				"text": "操作台"
+			},
+			{
+				"pagePath": "pages/word/word",
+				"iconPath": "/static/image/word.png",
+				"selectedIconPath": "/static/image/word-a.png",
+				"text": "文章"
+			},
+			{
+				"pagePath": "pages/mApi/mApi",
+				"iconPath": "/static/image/word.png",
+				"selectedIconPath": "/static/image/word-a.png",
+				"text": "API"
+			}
+		]
+	},
+	"subPackages": [
+		{
+			"root": "pageB",
+			"pages": [{
+				"path" : "searchIP/searchIP",
+				"style" : 
+				{
+					"navigationBarTitleText" : "IP查询",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "viewMap/viewMap",
+				"style" : 
+				{
+					"navigationBarTitleText" : "查看地图",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "moreWeather/moreWeather",
+				"style" : 
+				{
+					"navigationBarTitleText" : "15天预报",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "addressRes/addressRes",
+				"style" : 
+				{
+					"navigationBarTitleText" : "地址解析",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "randomPattern/randomPattern",
+				"style" : 
+				{
+					"navigationBarTitleText" : "随机萌图",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "KingHonor/KingHonor",
+				"style" : 
+				{
+					"navigationBarTitleText" : "王者战力",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "randomWord/randomWord",
+				"style" : 
+				{
+					"navigationBarTitleText" : "随机文案",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "randomSong/randomSong",
+				"style" : 
+				{
+					"navigationBarTitleText" : "随机热歌",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "randomDOG/randomDOG",
+				"style" : 
+				{
+					"navigationBarTitleText" : "舔狗日记",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "randomBrains/randomBrains",
+				"style" : 
+				{
+					"navigationBarTitleText" : "脑筋急转弯",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "vocabulary/vocabulary",
+				"style" : 
+				{
+					"navigationBarTitleText" : "学习单词",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "sketch/sketch",
+				"style" : 
+				{
+					"navigationBarTitleText" : "图片素描",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "neteaseCloud/neteaseCloud",
+				"style" : 
+				{
+					"navigationBarTitleText" : "网易云歌单",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "profilePhoto/profilePhoto",
+				"style" : 
+				{
+					"navigationBarTitleText" : "头像生成",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "playlet/playlet",
+				"style" : 
+				{
+					"navigationBarTitleText" : "短剧搜索",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "novelSearch/novelSearch",
+				"style" : 
+				{
+					"navigationBarTitleText" : "小说搜索",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "proverb/proverb",
+				"style" : 
+				{
+					"navigationBarTitleText" : "歇后语",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "cartoon/cartoon",
+				"style" : 
+				{
+					"navigationBarTitleText" : "动漫搜索",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "cartoonSeries/cartoonSeries",
+				"style" : 
+				{
+					"navigationBarTitleText" : "详情",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "cartoonVideo/cartoonVideo",
+				"style" : 
+				{
+					"navigationBarTitleText" : "播放",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "musicSearch/musicSearch",
+				"style" : 
+				{
+					"navigationBarTitleText" : "音乐搜索",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "qqMusic/qqMusic",
+				"style" : 
+				{
+					"navigationBarTitleText" : "qq音乐",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "kuaikanComics/kuaikanComics",
+				"style" : 
+				{
+					"navigationBarTitleText" : "快看漫画排行榜",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "wyMusic/wyMusic",
+				"style" : 
+				{
+					"navigationBarTitleText" : "网易云VIP音乐",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "phrase/phrase",
+				"style" : 
+				{
+					"navigationBarTitleText" : "成语学习",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "polymerizationWord/polymerizationWord",
+				"style" : 
+				{
+					"navigationBarTitleText" : "聚合语录",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "historyLearn/historyLearn",
+				"style" : 
+				{
+					"navigationBarTitleText" : "学习历史",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "translate/translate",
+				"style" : 
+				{
+					"navigationBarTitleText" : "翻译",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "horoscope/horoscope",
+				"style" : 
+				{
+					"navigationBarTitleText" : "运势占卜",
+					"enablePullDownRefresh" : true
+				}
+			},
+			{
+				"path" : "overlord/overlord",
+				"style" : 
+				{
+					"navigationBarTitleText" : "霸道总裁语录",
+					"enablePullDownRefresh" : false
+				}
+			}]
+		}
+	]
+}

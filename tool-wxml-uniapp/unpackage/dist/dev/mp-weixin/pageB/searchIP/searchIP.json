@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "IP查询",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "u-input": "/uni_modules/uview-ui/components/u-input/u-input",
+    "u-button": "/uni_modules/uview-ui/components/u-button/u-button",
+    "u-cell-group": "/uni_modules/uview-ui/components/u-cell-group/u-cell-group",
+    "u-cell-item": "/uni_modules/uview-ui/components/u-cell-item/u-cell-item"
+  }
+}
