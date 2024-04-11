@@ -53,6 +53,10 @@
 .flex2.data-v-9c19d32e {
   flex: 2;
 }
+.url-wrap.data-v-9c19d32e {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
 .u-mask.data-v-9c19d32e {
   position: fixed;
   top: 0;

@@ -41,7 +41,16 @@
         "historyLearn/historyLearn",
         "translate/translate",
         "horoscope/horoscope",
-        "overlord/overlord"
+        "overlord/overlord",
+        "hotSearch/hotSearch",
+        "characterDesign/characterDesign",
+        "bucketChart/bucketChart",
+        "loversImage/loversImage",
+        "qqMusicWord/qqMusicWord",
+        "readingParty/readingParty",
+        "webResource/webResource",
+        "crayonShinChan/crayonShinChan",
+        "tarot/tarot"
       ]
     }
   ],
@@ -65,8 +74,8 @@
       },
       {
         "pagePath": "pages/learn/learn",
-        "iconPath": "/static/image/weater.png",
-        "selectedIconPath": "/static/image/weater-a.png",
+        "iconPath": "/static/image/learn.png",
+        "selectedIconPath": "/static/image/learn-a.png",
         "text": "学习"
       },
       {
@@ -83,8 +92,8 @@
       },
       {
         "pagePath": "pages/mApi/mApi",
-        "iconPath": "/static/image/word.png",
-        "selectedIconPath": "/static/image/word-a.png",
+        "iconPath": "/static/image/api.png",
+        "selectedIconPath": "/static/image/api-a.png",
         "text": "API"
       }
     ]

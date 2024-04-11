@@ -739,6 +739,10 @@
 .flex2.data-v-2ee87dc9 {
   flex: 2;
 }
+.url-wrap.data-v-2ee87dc9 {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
 .u-icon.data-v-2ee87dc9 {
   display: inline-flex;
   align-items: center;

@@ -108,4 +108,8 @@ $uni-font-size-paragraph:15px;
   -ms-flex: 2;
   flex: 2;
 }
+.url-wrap{
+	white-space:pre-wrap;
+	overflow-wrap:anywhere;
+}
 $uni-font-weight:bold;

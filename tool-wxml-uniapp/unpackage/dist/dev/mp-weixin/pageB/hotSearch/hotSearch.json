@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "热搜榜",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "u-form": "/uni_modules/uview-ui/components/u-form/u-form",
+    "u-form-item": "/uni_modules/uview-ui/components/u-form-item/u-form-item",
+    "u-input": "/uni_modules/uview-ui/components/u-input/u-input",
+    "u-select": "/uni_modules/uview-ui/components/u-select/u-select",
+    "u-button": "/uni_modules/uview-ui/components/u-button/u-button",
+    "u-badge": "/uni_modules/uview-ui/components/u-badge/u-badge",
+    "u-tag": "/uni_modules/uview-ui/components/u-tag/u-tag",
+    "u-modal": "/uni_modules/uview-ui/components/u-modal/u-modal"
+  }
+}

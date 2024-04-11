@@ -53,4 +53,8 @@
 .flex2.data-v-786a592e {
   flex: 2;
 }
+.url-wrap.data-v-786a592e {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
 

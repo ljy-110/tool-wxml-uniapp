@@ -53,6 +53,10 @@
 .flex2.data-v-409a4a1a {
   flex: 2;
 }
+.url-wrap.data-v-409a4a1a {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
 .u-loading-circle.data-v-409a4a1a {
   display: inline-flex;
   vertical-align: middle;

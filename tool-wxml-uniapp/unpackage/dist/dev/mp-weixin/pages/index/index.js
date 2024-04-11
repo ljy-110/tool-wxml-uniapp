@@ -101,7 +101,7 @@ var components
 try {
   components = {
     uIcon: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-icon/u-icon */ "uni_modules/uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-icon/u-icon.vue */ 239))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-icon/u-icon */ "uni_modules/uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-icon/u-icon.vue */ 387))
     },
   }
 } catch (e) {
@@ -221,15 +221,30 @@ var _default = {
         icon: 'car',
         router: '/pageB/addressRes/addressRes'
       }, {
+        id: '37',
+        name: '塔罗牌',
+        icon: 'fingerprint',
+        router: '/pageB/tarot/tarot'
+      }, {
+        id: '38',
+        name: '搞笑视频',
+        icon: 'skip-forward-right',
+        router: '/pageB/crayonShinChan/crayonShinChan'
+      }, {
+        id: '28',
+        name: '热搜榜',
+        icon: 'order',
+        router: '/pageB/hotSearch/hotSearch'
+      }, {
+        id: '35',
+        name: '网盘资源',
+        icon: 'download',
+        router: '/pageB/webResource/webResource'
+      }, {
         id: '5',
         name: '随机萌图',
         icon: 'photo',
         router: '/pageB/randomPattern/randomPattern'
-      }, {
-        id: '6',
-        name: '王者战力',
-        icon: 'level',
-        router: '/pageB/KingHonor/KingHonor'
       }, {
         id: '8',
         name: '随机热歌',
@@ -246,11 +261,6 @@ var _default = {
         icon: 'volume-up',
         router: '/pageB/wyMusic/wyMusic'
       }, {
-        id: '13',
-        name: '图片素描',
-        icon: 'photo',
-        router: '/pageB/sketch/sketch'
-      }, {
         id: '15',
         name: '头像生成',
         icon: 'photo',
@@ -260,6 +270,11 @@ var _default = {
         name: '短剧搜索',
         icon: 'play-circle',
         router: '/pageB/playlet/playlet'
+      }, {
+        id: '21',
+        name: '快看漫画',
+        icon: 'file-text',
+        router: '/pageB/kuaikanComics/kuaikanComics'
       }, {
         id: '17',
         name: '小说搜索',
@@ -273,7 +288,7 @@ var _default = {
       }, {
         id: '20',
         name: '音乐搜索',
-        icon: 'volume-up',
+        icon: 'search',
         router: '/pageB/musicSearch/musicSearch'
       }, {
         id: '20',
@@ -281,10 +296,30 @@ var _default = {
         icon: 'volume',
         router: '/pageB/qqMusic/qqMusic'
       }, {
-        id: '21',
-        name: '快看漫画',
-        icon: 'file-text',
-        router: '/pageB/kuaikanComics/kuaikanComics'
+        id: '32',
+        name: 'Q音歌词',
+        icon: 'volume',
+        router: '/pageB/qqMusicWord/qqMusicWord'
+      }, {
+        id: '6',
+        name: '王者战力',
+        icon: 'level',
+        router: '/pageB/KingHonor/KingHonor'
+      }, {
+        id: '30',
+        name: '斗图',
+        icon: 'bookmark',
+        router: '/pageB/bucketChart/bucketChart'
+      }, {
+        id: '31',
+        name: '情侣头像',
+        icon: 'heart',
+        router: '/pageB/loversImage/loversImage'
+      }, {
+        id: '13',
+        name: '图片素描',
+        icon: 'photo',
+        router: '/pageB/sketch/sketch'
       }],
       address: '天河区',
       WeatherInfo: {}
@@ -382,6 +417,12 @@ var _default = {
         },
         complete: function complete() {}
       });
+    },
+    toWeather: function toWeather() {
+      uni.switchTab({
+        url: '/pages/weather/weather'
+      });
+      console.log('ces');
     }
   }
 };

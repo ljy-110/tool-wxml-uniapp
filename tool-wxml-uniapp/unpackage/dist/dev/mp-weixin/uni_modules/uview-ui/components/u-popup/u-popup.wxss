@@ -53,6 +53,10 @@
 .flex2.data-v-3a231fda {
   flex: 2;
 }
+.url-wrap.data-v-3a231fda {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
 .u-drawer.data-v-3a231fda {
   display: block;
   position: fixed;

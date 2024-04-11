@@ -26,7 +26,7 @@
 					{
 						id: '9',
 						name: '舔狗日记',
-						icon: 'file-text',
+						icon: 'cut',
 						router: '/pageB/randomDOG/randomDOG'
 					},
 					{
@@ -38,19 +38,19 @@
 					{
 						id: '11',
 						name: '学习单词',
-						icon: 'pushpin',
+						icon: 'volume-up',
 						router: '/pageB/vocabulary/vocabulary'
 					},
 					{
 						id: '18',
 						name: '歇后语',
-						icon: 'file-text',
+						icon: 'order',
 						router: '/pageB/proverb/proverb'
 					},
 					{
 						id: '23',
 						name: '成语学习',
-						icon: 'file-text',
+						icon: 'order',
 						router: '/pageB/phrase/phrase'
 					},
 					{
@@ -68,13 +68,13 @@
 					{
 						id: '25',
 						name: '翻译',
-						icon: 'file-text',
+						icon: 'pushpin',
 						router: '/pageB/translate/translate'
 					},
 					{
 						id: '26',
 						name: '运势占卜',
-						icon: 'file-text',
+						icon: 'question-circle',
 						router: '/pageB/horoscope/horoscope'
 					},
 					{
@@ -82,6 +82,12 @@
 						name: '霸道总裁',
 						icon: 'file-text',
 						router: '/pageB/overlord/overlord'
+					},
+					{
+						id: '34',
+						name: '60秒读世界',
+						icon: 'thumb-up',
+						router: '/pageB/readingParty/readingParty'
 					},
 				]
 			};

@@ -53,6 +53,10 @@
 .flex2.data-v-6e8b1496 {
   flex: 2;
 }
+.url-wrap.data-v-6e8b1496 {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
 .item-box.data-v-6e8b1496 {
   width: 100%;
   padding: 10px;

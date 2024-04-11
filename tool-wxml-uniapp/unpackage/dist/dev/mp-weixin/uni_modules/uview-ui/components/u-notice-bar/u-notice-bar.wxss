@@ -53,6 +53,10 @@
 .flex2.data-v-24c07869 {
   flex: 2;
 }
+.url-wrap.data-v-24c07869 {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
 .u-notice-bar-wrap.data-v-24c07869 {
   overflow: hidden;
 }

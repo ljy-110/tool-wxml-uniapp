@@ -53,6 +53,10 @@
 .flex2 {
   flex: 2;
 }
+.url-wrap {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
 .u-col {
   float: left;
 }

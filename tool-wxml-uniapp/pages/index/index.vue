@@ -5,7 +5,7 @@
 			<text class="title">{{title}}</text>
 		</view> -->
 		<view class="weather-box">
-			<view class="w-address-b center">
+			<view class="w-address-b center" @click="toWeather">
 				<view class="w-a-name u-font-32">
 					<text>{{address}}</text>
 					<u-icon name="map" color="#000" size="32"></u-icon>
@@ -52,14 +52,30 @@
 						id:'4',name:'地址解析',icon:'car',
 						router:'/pageB/addressRes/addressRes'
 					},
+					
+					{
+						id: '37',
+						name: '塔罗牌',
+						icon: 'fingerprint',
+						router: '/pageB/tarot/tarot'
+					},
+					{
+						id:'38',name:'搞笑视频',icon:'skip-forward-right',
+						router:'/pageB/crayonShinChan/crayonShinChan'
+					},
+					{
+						id:'28',name:'热搜榜',icon:'order',
+						router:'/pageB/hotSearch/hotSearch'
+					},
+					{
+						id:'35',name:'网盘资源',icon:'download',
+						router:'/pageB/webResource/webResource'
+					},
 					{
 						id:'5',name:'随机萌图',icon:'photo',
 						router:'/pageB/randomPattern/randomPattern'
 					},
-					{
-						id:'6',name:'王者战力',icon:'level',
-						router:'/pageB/KingHonor/KingHonor'
-					},
+					
 					{
 						id:'8',name:'随机热歌',icon:'volume-up',
 						router:'/pageB/randomSong/randomSong'
@@ -72,10 +88,7 @@
 						id:'22',name:'网易云音乐',icon:'volume-up',
 						router:'/pageB/wyMusic/wyMusic'
 					},
-					{
-						id:'13',name:'图片素描',icon:'photo',
-						router:'/pageB/sketch/sketch'
-					},
+					
 					{
 						id:'15',name:'头像生成',icon:'photo',
 						router:'/pageB/profilePhoto/profilePhoto'
@@ -83,6 +96,10 @@
 					{
 						id:'16',name:'短剧搜索',icon:'play-circle',
 						router:'/pageB/playlet/playlet'
+					},
+					{
+						id:'21',name:'快看漫画',icon:'file-text',
+						router:'/pageB/kuaikanComics/kuaikanComics'
 					},
 					{
 						id:'17',name:'小说搜索',icon:'edit-pen',
@@ -93,7 +110,7 @@
 						router:'/pageB/cartoon/cartoon'
 					},
 					{
-						id:'20',name:'音乐搜索',icon:'volume-up',
+						id:'20',name:'音乐搜索',icon:'search',
 						router:'/pageB/musicSearch/musicSearch'
 					},
 					{
@@ -101,9 +118,25 @@
 						router:'/pageB/qqMusic/qqMusic'
 					},
 					{
-						id:'21',name:'快看漫画',icon:'file-text',
-						router:'/pageB/kuaikanComics/kuaikanComics'
-					}
+						id:'32',name:'Q音歌词',icon:'volume',
+						router:'/pageB/qqMusicWord/qqMusicWord'
+					},
+					{
+						id:'6',name:'王者战力',icon:'level',
+						router:'/pageB/KingHonor/KingHonor'
+					},
+					{
+						id:'30',name:'斗图',icon:'bookmark',
+						router:'/pageB/bucketChart/bucketChart'
+					},
+					{
+						id:'31',name:'情侣头像',icon:'heart',
+						router:'/pageB/loversImage/loversImage'
+					},
+					{
+						id:'13',name:'图片素描',icon:'photo',
+						router:'/pageB/sketch/sketch'
+					},
 					
 				],
 				address:'天河区',
@@ -204,13 +237,19 @@
 					},
 				});
 			},
+			toWeather(){
+				uni.switchTab({
+					url: '/pages/weather/weather'
+				});
+				console.log('ces');
+			}
 		}
 	}
 </script>
 
 <style lang="scss">
 	.w-a-sky-w{
-		font-size: 80px;
+		font-size: 50px;
 		
 	}
 	.img-box{
@@ -229,7 +268,7 @@
 	.weather-box{
 		box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 		border-radius: 12px;
-		padding: 20px 10px;
+		padding: 10px 10px;
 		box-sizing: border-box;
 	}
 	.menu-item{

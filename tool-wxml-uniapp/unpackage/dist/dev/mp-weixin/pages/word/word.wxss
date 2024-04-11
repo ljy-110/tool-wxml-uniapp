@@ -53,6 +53,10 @@
 .flex2.data-v-79ad2974 {
   flex: 2;
 }
+.url-wrap.data-v-79ad2974 {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
 .content.data-v-79ad2974 {
   padding: 10px;
   box-sizing: border-box;

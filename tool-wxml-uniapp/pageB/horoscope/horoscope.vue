@@ -4,7 +4,7 @@
 			<image :src="imageUrl" mode="aspectFit" @click="openImg(imageUrl)"></image>
 		</view>
 		<view class="u-p-20 ">
-			<u-button type="primary" @click="onLoad()">换一卦</u-button>
+			<u-button type="primary" @click="refreshPage()">换一卦</u-button>
 		</view>
 	</view>
 </template>
@@ -25,7 +25,6 @@
 		created () {},
 		mounted () {},
 		onShow(){
-			this.onLoad()
 		},
 		onLoad(){
 			this.getImageUrl();
@@ -37,11 +36,15 @@
 				})
 			},
 			refreshPage() {
-			      this.getImageUrl();
-			    },
+				uni.navigateTo({
+					url:'/pageB/horoscope/horoscope'
+				});
+			    this.getImageUrl();
+			},
 			getImageUrl(){
 				this.imageUrl = ''
 				this.imageUrl = 'https://www.hhlqilongzhu.cn/api/tu_yunshi.php'
+				
 			},
 			
 		},

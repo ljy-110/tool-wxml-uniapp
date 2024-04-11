@@ -1,0 +1,1 @@
+<view class="u-p-20 data-v-8227dc36"><block wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="u-m-b-20 data-v-8227dc36">{{''+item+''}}</view></block></view>

@@ -53,6 +53,10 @@
 .flex2.data-v-113bc24f {
   flex: 2;
 }
+.url-wrap.data-v-113bc24f {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
 .u-input.data-v-113bc24f {
   position: relative;
   flex: 1;

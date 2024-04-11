@@ -53,6 +53,10 @@
 .flex2.data-v-3bda0f19 {
   flex: 2;
 }
+.url-wrap.data-v-3bda0f19 {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
 .u-notice-bar.data-v-3bda0f19 {
   width: 100%;
   display: flex;

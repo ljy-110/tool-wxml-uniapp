@@ -53,6 +53,10 @@
 .flex2.data-v-5f206dd6 {
   flex: 2;
 }
+.url-wrap.data-v-5f206dd6 {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
 .img-box.data-v-5f206dd6 {
   height: 40rpx;
   width: 40rpx;

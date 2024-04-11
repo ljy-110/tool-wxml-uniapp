@@ -81,8 +81,8 @@
 			},
 			{
 				"pagePath": "pages/learn/learn",
-				"iconPath": "/static/image/weater.png",
-				"selectedIconPath": "/static/image/weater-a.png",
+				"iconPath": "/static/image/learn.png",
+				"selectedIconPath": "/static/image/learn-a.png",
 				"text": "学习"
 			},
 			{
@@ -99,8 +99,8 @@
 			},
 			{
 				"pagePath": "pages/mApi/mApi",
-				"iconPath": "/static/image/word.png",
-				"selectedIconPath": "/static/image/word-a.png",
+				"iconPath": "/static/image/api.png",
+				"selectedIconPath": "/static/image/api-a.png",
 				"text": "API"
 			}
 		]
@@ -345,6 +345,78 @@
 				"style" : 
 				{
 					"navigationBarTitleText" : "霸道总裁语录",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "hotSearch/hotSearch",
+				"style" : 
+				{
+					"navigationBarTitleText" : "热搜榜",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "characterDesign/characterDesign",
+				"style" : 
+				{
+					"navigationBarTitleText" : "人物设定",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "bucketChart/bucketChart",
+				"style" : 
+				{
+					"navigationBarTitleText" : "斗图",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "loversImage/loversImage",
+				"style" : 
+				{
+					"navigationBarTitleText" : "情头头像",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "qqMusicWord/qqMusicWord",
+				"style" : 
+				{
+					"navigationBarTitleText" : "QQ音乐歌词",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "readingParty/readingParty",
+				"style" : 
+				{
+					"navigationBarTitleText" : "60秒读世界",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "webResource/webResource",
+				"style" : 
+				{
+					"navigationBarTitleText" : "网盘资源",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "crayonShinChan/crayonShinChan",
+				"style" : 
+				{
+					"navigationBarTitleText" : "搞笑视频",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "tarot/tarot",
+				"style" : 
+				{
+					"navigationBarTitleText" : "塔罗牌",
 					"enablePullDownRefresh" : false
 				}
 			}]

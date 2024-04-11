@@ -53,6 +53,10 @@
 .flex2.data-v-ae729696 {
   flex: 2;
 }
+.url-wrap.data-v-ae729696 {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
 #myVideo.data-v-ae729696 {
   width: 100%;
 }
