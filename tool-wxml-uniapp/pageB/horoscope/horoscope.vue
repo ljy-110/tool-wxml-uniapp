@@ -3,9 +3,9 @@
 		<view class="u-p-t-20 center" v-if="imageUrl">
 			<image :src="imageUrl" mode="aspectFit" @click="openImg(imageUrl)"></image>
 		</view>
-		<view class="u-p-20 ">
+		<!-- <view class="u-p-20 ">
 			<u-button type="primary" @click="refreshPage()">换一卦</u-button>
-		</view>
+		</view> -->
 	</view>
 </template>
 
@@ -26,6 +26,12 @@
 		mounted () {},
 		onShow(){
 		},
+		onPullDownRefresh() {
+			this.getImageUrl();
+			setTimeout(function () {
+				uni.stopPullDownRefresh();
+			}, 1000);
+		},
 		onLoad(){
 			this.getImageUrl();
 		},
@@ -36,9 +42,9 @@
 				})
 			},
 			refreshPage() {
-				uni.navigateTo({
-					url:'/pageB/horoscope/horoscope'
-				});
+				// uni.navigateTo({
+				// 	url:'/pageB/horoscope/horoscope'
+				// });
 			    this.getImageUrl();
 			},
 			getImageUrl(){

@@ -8,7 +8,7 @@
 		</u-form>
 		
 		<view class="u-p-t-20 center">
-			<view v-for="(item,index) in list" :key="index" class="item-box">
+			<view v-for="(item,index) in list" :key="index" class="item-box" @click="toRS(item)">
 				<view class="">
 					{{item.title}}
 				</view>
@@ -18,11 +18,14 @@
 			</view>
 			
 		</view>
+		
+		<u-modal v-model="showDetail" :title="titleDialog" :show-confirm-button="true"
+				:show-cancel-button="true" cancel-text="关闭" confirm-text="复制" @confirm="copyTextToClipboard"
+				 :content="content"></u-modal>
 	</view>
 </template>
 
 <script>
-import { log } from 'util';
 	export default {
 		data() {
 			return {
@@ -39,7 +42,10 @@ import { log } from 'util';
 				info:{},
 				list:[],
 				wordList:[],
-				showWord:false
+				showWord:false,
+				titleDialog:'',
+				content:'',
+				showDetail:false
 			};
 		},
 		onReady() {
@@ -105,6 +111,31 @@ import { log } from 'util';
 					complete() {},
 				});
 			},
+			toRS(item){
+				this.titleDialog = item.title
+				this.content = '地址：'+ item.data_url + ''
+				this.showDetail = true
+			},
+			copyTextToClipboard(){
+				let that = this
+				uni.setClipboardData({  
+					data: that.content,  
+					success: () => {  
+					  uni.showToast({  
+						title: '复制成功',  
+						icon: 'success',  
+						duration: 2000  
+					  });  
+					},  
+					fail: (err) => {  
+					  uni.showToast({  
+						title: '复制失败：' + err.errMsg,  
+						icon: 'none',  
+						duration: 2000  
+					  });  
+					}  
+				  });  
+			}
 		},
 
 	}

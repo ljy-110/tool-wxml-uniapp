@@ -11,8 +11,8 @@
 		<view class="u-p-t-20 center">
 			<view v-for="(item,index) in list" :key="index" class="item-box" @click="toRS(item)">
 				<view class="">
-					<u-badge type="error" :count="index + 1" style="position: relative;" :offset="[0,5]"></u-badge>
-					{{item.title}}
+					<u-badge type="error" :count="index + 1" style="position: relative;" :offset="[0,-15]"></u-badge>
+					<text class="u-p-l-20">{{item.title}}</text>
 					<u-tag :text="item.hot" type="error" mode="light" size="mini" style="margin-left: 15rpx;" />
 				</view>
 				
@@ -20,8 +20,8 @@
 			
 		</view>
 		
-		<u-modal v-model="showDetail" :title="titleDialog" :show-confirm-button="false"
-				:show-cancel-button="true" cancel-text="关闭"
+		<u-modal v-model="showDetail" :title="titleDialog" :show-confirm-button="true"
+				:show-cancel-button="true" cancel-text="关闭" confirm-text="复制" @confirm="copyTextToClipboard"
 				 :content="content"></u-modal>
 	</view>
 </template>
@@ -189,8 +189,28 @@
 			},
 			toRS(item){
 				this.titleDialog = item.title
-				this.content = item.url
+				this.content = '地址：'+ item.url + ''
 				this.showDetail = true
+			},
+			copyTextToClipboard(){
+				let that = this
+				uni.setClipboardData({  
+					data: that.content,  
+					success: () => {  
+					  uni.showToast({  
+						title: '复制成功',  
+						icon: 'success',  
+						duration: 2000  
+					  });  
+					},  
+					fail: (err) => {  
+					  uni.showToast({  
+						title: '复制失败：' + err.errMsg,  
+						icon: 'none',  
+						duration: 2000  
+					  });  
+					}  
+				  });  
 			}
 		},
 

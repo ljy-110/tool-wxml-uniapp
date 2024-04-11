@@ -245,7 +245,7 @@
 						}
 						that.latitude = res.latitude
 						that.longitude = res.longitude
-						console.log(res);
+						// console.log(res);
 						// that.getAddress(res.latitude,res.longitude)
 					}
 				})
@@ -391,7 +391,7 @@
 						if (res.data.code == 200) {
 							// that.ipData = res.data.result
 							that.weatherIndexList = res.data.daily
-							console.log(res.data);
+							// console.log(res.data);
 						} else {
 							uni.showToast({
 								title: res.data.message,

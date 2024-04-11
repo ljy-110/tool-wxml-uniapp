@@ -80,10 +80,10 @@ var components
 try {
   components = {
     uNoticeBar: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-notice-bar/u-notice-bar */ "uni_modules/uview-ui/components/u-notice-bar/u-notice-bar").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-notice-bar/u-notice-bar.vue */ 408))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-notice-bar/u-notice-bar */ "uni_modules/uview-ui/components/u-notice-bar/u-notice-bar").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-notice-bar/u-notice-bar.vue */ 490))
     },
     uIcon: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-icon/u-icon */ "uni_modules/uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-icon/u-icon.vue */ 387))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-icon/u-icon */ "uni_modules/uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-icon/u-icon.vue */ 469))
     },
   }
 } catch (e) {
@@ -224,6 +224,41 @@ var _default = {
         name: '60秒读世界',
         icon: 'thumb-up',
         router: '/pageB/readingParty/readingParty'
+      }, {
+        id: '35',
+        name: '人物设定',
+        icon: 'account',
+        router: '/pageB/characterDesign/characterDesign'
+      }, {
+        id: '40',
+        name: '网易云热评',
+        icon: 'file-text',
+        router: '/pageB/neteaseComment/neteaseComment'
+      }, {
+        id: '46',
+        name: '名人名言',
+        icon: 'file-text',
+        router: '/pageC/famousPeople/famousPeople'
+      }, {
+        id: '48',
+        name: '文字转语音',
+        icon: 'chat',
+        router: '/pageC/languageConverter/languageConverter'
+      }, {
+        id: '49',
+        name: '历史的今天',
+        icon: 'file-text',
+        router: '/pageC/historyToday/historyToday'
+      }, {
+        id: '51',
+        name: '摸鱼日报',
+        icon: 'file-text',
+        router: '/pageC/slackDaily/slackDaily'
+      }, {
+        id: '49',
+        name: '星座运势',
+        icon: 'star',
+        router: '/pageC/horoscope/horoscope'
       }]
     };
   },
@@ -248,7 +283,7 @@ var _default = {
       var that = this;
       // uni.showLoading({title:'加载中...'})
       uni.request({
-        url: 'https://www.hhlqilongzhu.cn/api/yiyan.php',
+        url: 'https://v.api.aa1.cn/api/api-wenan-wangyiyunreping/index.php?aa1=json',
         // dataType: "json",
         // responseType: "json",
         method: 'GET',
@@ -259,8 +294,8 @@ var _default = {
         firstIpv4: false,
         success: function success(res) {
           that.list = [];
-          that.list.push(res.data);
-          that.list.push(res.data);
+          that.list.push(res.data[0].wangyiyunreping);
+          that.list.push(res.data[0].wangyiyunreping);
           // uni.hideLoading();
           // if (res.data.code == 200) {
           // 	let parts = res.data.split('\n');

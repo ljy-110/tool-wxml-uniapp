@@ -101,16 +101,16 @@ var components
 try {
   components = {
     uForm: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-form/u-form */ "uni_modules/uview-ui/components/u-form/u-form").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-form/u-form.vue */ 472))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-form/u-form */ "uni_modules/uview-ui/components/u-form/u-form").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-form/u-form.vue */ 554))
     },
     uFormItem: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-form-item/u-form-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-form-item/u-form-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-form-item/u-form-item.vue */ 479))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-form-item/u-form-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-form-item/u-form-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-form-item/u-form-item.vue */ 561))
     },
     uInput: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-input/u-input */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-input/u-input")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-input/u-input.vue */ 429))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-input/u-input */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-input/u-input")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-input/u-input.vue */ 511))
     },
     uButton: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-button/u-button */ "uni_modules/uview-ui/components/u-button/u-button").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-button/u-button.vue */ 394))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-button/u-button */ "uni_modules/uview-ui/components/u-button/u-button").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-button/u-button.vue */ 476))
     },
   }
 } catch (e) {
@@ -263,20 +263,20 @@ var _default = {
         withCredentials: false,
         firstIpv4: false,
         success: function success(res) {
-          var parts = res.data.split('\n');
-          that.list = parts;
-          uni.hideLoading();
-          // if (res.data.code == 200) {
-          // 	let parts = res.data.split('\n');
-          // 	that.info = res.data
-          // } else {
-          // 	uni.showToast({
-          // 		title: res.data.message,
-          // 		icon: 'error',
-          // 		mask: true,
-          // 		duration: 2000
-          // 	});
-          // }
+          // let parts = res.data.split('\n');
+          // that.list = parts
+          // uni.hideLoading();
+          if (res.data.code == 200) {
+            that.list = res.data.data;
+            uni.hideLoading();
+          } else {
+            uni.showToast({
+              title: res.data.message,
+              icon: 'error',
+              mask: true,
+              duration: 2000
+            });
+          }
         },
         fail: function fail(err) {
           uni.showToast({
@@ -291,7 +291,7 @@ var _default = {
     },
     toMusic: function toMusic(name, index) {
       var that = this;
-      var aname = name.split(index + '.');
+      // let aname = name.split(index+'.')
       uni.showLoading({
         title: '加载中...'
       });
@@ -301,7 +301,7 @@ var _default = {
         // responseType: "json",
         method: 'GET',
         data: {
-          gm: aname,
+          gm: name,
           type: 'json',
           n: index,
           br: 2,

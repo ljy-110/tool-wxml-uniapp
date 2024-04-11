@@ -1,5 +1,5 @@
 <template>
-	<view click="u-p-20">
+	<view class="u-p-20">
 		<view class="u-p-t-20 center" v-if="imageUrl">
 			<image :src="imageUrl" mode="widthFix" @click="openImg(imageUrl)"></image>
 		</view>

@@ -1,0 +1,1 @@
+<view class="data-v-374e29a0"><block wx:if="{{imageUrl}}"><view class="u-p-t-20 center data-v-374e29a0"><image src="{{imageUrl}}" mode="widthFix" data-event-opts="{{[['tap',[['openImg',['$0'],['imageUrl']]]]]}}" bindtap="__e" class="data-v-374e29a0"></image></view></block></view>

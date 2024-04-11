@@ -8,6 +8,7 @@
 			播放地址：
 			<u-input type="textarea" v-model="videoUrl" :border="true" :height="400"/>
 		</view>
+		<u-button @click="copyTextToClipboard">复制地址</u-button>
 	</view>
 </template>
 
@@ -43,6 +44,26 @@
 				// 	showCancel: false
 				// })
 			},
+			copyTextToClipboard(){
+							let that = this
+							uni.setClipboardData({  
+								data: that.videoUrl,  
+								success: () => {  
+								  uni.showToast({  
+									title: '复制成功',  
+									icon: 'success',  
+									duration: 2000  
+								  });  
+								},  
+								fail: (err) => {  
+								  uni.showToast({  
+									title: '复制失败：' + err.errMsg,  
+									icon: 'none',  
+									duration: 2000  
+								  });  
+								}  
+							  });  
+						},
 			getApi(op) {
 				let that = this
 				uni.request({

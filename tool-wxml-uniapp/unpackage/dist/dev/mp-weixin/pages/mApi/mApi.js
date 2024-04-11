@@ -101,10 +101,10 @@ var components
 try {
   components = {
     uEmpty: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-empty/u-empty */ "uni_modules/uview-ui/components/u-empty/u-empty").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-empty/u-empty.vue */ 415))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-empty/u-empty */ "uni_modules/uview-ui/components/u-empty/u-empty").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-empty/u-empty.vue */ 497))
     },
     uLoadmore: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-loadmore/u-loadmore */ "uni_modules/uview-ui/components/u-loadmore/u-loadmore").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-loadmore/u-loadmore.vue */ 422))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-loadmore/u-loadmore */ "uni_modules/uview-ui/components/u-loadmore/u-loadmore").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-loadmore/u-loadmore.vue */ 504))
     },
   }
 } catch (e) {

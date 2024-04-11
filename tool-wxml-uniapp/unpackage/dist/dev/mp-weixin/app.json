@@ -50,7 +50,25 @@
         "readingParty/readingParty",
         "webResource/webResource",
         "crayonShinChan/crayonShinChan",
-        "tarot/tarot"
+        "tarot/tarot",
+        "neteaseComment/neteaseComment"
+      ]
+    },
+    {
+      "root": "pageC",
+      "pages": [
+        "icpFiling/icpFiling",
+        "phoneOwnership/phoneOwnership",
+        "cosplayPhoto/cosplayPhoto",
+        "famousPeople/famousPeople",
+        "plateAffiliation/plateAffiliation",
+        "languageConverter/languageConverter",
+        "historyToday/historyToday",
+        "horoscope/horoscope",
+        "dailyNews/dailyNews",
+        "hatsuneMiku/hatsuneMiku",
+        "slackDaily/slackDaily",
+        "sjVideo/sjVideo"
       ]
     }
   ],
@@ -103,5 +121,11 @@
       "desc": "获取地方天气"
     }
   },
+  "__usePrivacyCheck__": true,
+  "resizable": false,
+  "requiredPrivateInfos": [
+    "getLocation",
+    "chooseLocation"
+  ],
   "usingComponents": {}
 }

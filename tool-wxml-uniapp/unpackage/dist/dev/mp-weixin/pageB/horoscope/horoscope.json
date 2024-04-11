@@ -1,7 +1,5 @@
 {
   "navigationBarTitleText": "运势占卜",
   "enablePullDownRefresh": true,
-  "usingComponents": {
-    "u-button": "/uni_modules/uview-ui/components/u-button/u-button"
-  }
+  "usingComponents": {}
 }

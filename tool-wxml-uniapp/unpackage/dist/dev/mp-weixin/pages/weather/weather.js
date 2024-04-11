@@ -101,10 +101,10 @@ var components
 try {
   components = {
     uIcon: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-icon/u-icon */ "uni_modules/uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-icon/u-icon.vue */ 387))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-icon/u-icon */ "uni_modules/uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-icon/u-icon.vue */ 469))
     },
     uModal: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-modal/u-modal */ "uni_modules/uview-ui/components/u-modal/u-modal").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-modal/u-modal.vue */ 401))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-modal/u-modal */ "uni_modules/uview-ui/components/u-modal/u-modal").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-modal/u-modal.vue */ 483))
     },
   }
 } catch (e) {
@@ -433,7 +433,7 @@ var _default = {
           };
           that.latitude = res.latitude;
           that.longitude = res.longitude;
-          console.log(res);
+          // console.log(res);
           // that.getAddress(res.latitude,res.longitude)
         }
       });
@@ -578,7 +578,7 @@ var _default = {
           if (res.data.code == 200) {
             // that.ipData = res.data.result
             that.weatherIndexList = res.data.daily;
-            console.log(res.data);
+            // console.log(res.data);
           } else {
             uni.showToast({
               title: res.data.message,

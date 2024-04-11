@@ -419,6 +419,113 @@
 					"navigationBarTitleText" : "塔罗牌",
 					"enablePullDownRefresh" : false
 				}
+			},
+			{
+				"path" : "neteaseComment/neteaseComment",
+				"style" : 
+				{
+					"navigationBarTitleText" : "网易云热评",
+					"enablePullDownRefresh" : false
+				}
+			}]
+		},
+		{
+			"root": "pageC",
+			"pages": [{
+				"path" : "icpFiling/icpFiling",
+				"style" : 
+				{
+					"navigationBarTitleText" : "ICP备案",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "phoneOwnership/phoneOwnership",
+				"style" : 
+				{
+					"navigationBarTitleText" : "手机号归属",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "cosplayPhoto/cosplayPhoto",
+				"style" : 
+				{
+					"navigationBarTitleText" : "Cosplay相册",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "famousPeople/famousPeople",
+				"style" : 
+				{
+					"navigationBarTitleText" : "名人名言",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "plateAffiliation/plateAffiliation",
+				"style" : 
+				{
+					"navigationBarTitleText" : "车牌号归属",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "languageConverter/languageConverter",
+				"style" : 
+				{
+					"navigationBarTitleText" : "文字转语音",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "historyToday/historyToday",
+				"style" : 
+				{
+					"navigationBarTitleText" : "历史的今天",
+					"enablePullDownRefresh" : true
+				}
+			},
+			{
+				"path" : "horoscope/horoscope",
+				"style" : 
+				{
+					"navigationBarTitleText" : "星座运势",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "dailyNews/dailyNews",
+				"style" : 
+				{
+					"navigationBarTitleText" : "",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "hatsuneMiku/hatsuneMiku",
+				"style" : 
+				{
+					"navigationBarTitleText" : "初音未来",
+					"enablePullDownRefresh" : true
+				}
+			},
+			{
+				"path" : "slackDaily/slackDaily",
+				"style" : 
+				{
+					"navigationBarTitleText" : "摸鱼日报",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "sjVideo/sjVideo",
+				"style" : 
+				{
+					"navigationBarTitleText" : "随机视频",
+					"enablePullDownRefresh" : false
+				}
 			}]
 		}
 	]

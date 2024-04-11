@@ -101,19 +101,19 @@ var components
 try {
   components = {
     uForm: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-form/u-form */ "uni_modules/uview-ui/components/u-form/u-form").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-form/u-form.vue */ 472))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-form/u-form */ "uni_modules/uview-ui/components/u-form/u-form").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-form/u-form.vue */ 554))
     },
     uFormItem: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-form-item/u-form-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-form-item/u-form-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-form-item/u-form-item.vue */ 479))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-form-item/u-form-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-form-item/u-form-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-form-item/u-form-item.vue */ 561))
     },
     uInput: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-input/u-input */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-input/u-input")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-input/u-input.vue */ 429))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-input/u-input */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-input/u-input")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-input/u-input.vue */ 511))
     },
     uButton: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-button/u-button */ "uni_modules/uview-ui/components/u-button/u-button").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-button/u-button.vue */ 394))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-button/u-button */ "uni_modules/uview-ui/components/u-button/u-button").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-button/u-button.vue */ 476))
     },
     uModal: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-modal/u-modal */ "uni_modules/uview-ui/components/u-modal/u-modal").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-modal/u-modal.vue */ 401))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-modal/u-modal */ "uni_modules/uview-ui/components/u-modal/u-modal").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-modal/u-modal.vue */ 483))
     },
   }
 } catch (e) {
@@ -176,7 +176,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-//
 //
 //
 //
@@ -339,6 +338,26 @@ var _default = {
           });
         },
         complete: function complete() {}
+      });
+    },
+    copyTextToClipboard: function copyTextToClipboard() {
+      var that = this;
+      uni.setClipboardData({
+        data: that.content,
+        success: function success() {
+          uni.showToast({
+            title: '复制成功',
+            icon: 'success',
+            duration: 2000
+          });
+        },
+        fail: function fail(err) {
+          uni.showToast({
+            title: '复制失败：' + err.errMsg,
+            icon: 'none',
+            duration: 2000
+          });
+        }
       });
     }
   }

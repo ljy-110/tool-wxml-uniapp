@@ -8,9 +8,9 @@
 		</u-form>
 		
 		<view class="u-p-t-20 center">
-			<view v-for="(item,index) in list" :key="index" class="item-box" @click="toMusic(item,index+1)">
+			<view v-for="(item,index) in list" :key="index" class="item-box" @click="toMusic(item.songname,index+1)">
 				<view class="">
-					{{item}}
+					{{item.n}}.{{item.songname}}--{{item.singer}}
 				</view>
 			</view>
 			
@@ -86,20 +86,20 @@
 					withCredentials: false,
 					firstIpv4: false,
 					success(res) {
-						let parts = res.data.split('\n');
-						that.list = parts
-						uni.hideLoading();
-						// if (res.data.code == 200) {
-						// 	let parts = res.data.split('\n');
-						// 	that.info = res.data
-						// } else {
-						// 	uni.showToast({
-						// 		title: res.data.message,
-						// 		icon: 'error',
-						// 		mask: true,
-						// 		duration: 2000
-						// 	});
-						// }
+						// let parts = res.data.split('\n');
+						// that.list = parts
+						// uni.hideLoading();
+						if (res.data.code == 200) {
+							that.list = res.data.data
+							uni.hideLoading();
+						} else {
+							uni.showToast({
+								title: res.data.message,
+								icon: 'error',
+								mask: true,
+								duration: 2000
+							});
+						}
 					},
 					fail(err) {
 						uni.showToast({
@@ -114,7 +114,7 @@
 			},
 			toMusic(name,index){
 				let that = this
-				let aname = name.split(index+'.')
+				// let aname = name.split(index+'.')
 				uni.showLoading({title:'加载中...'})
 				uni.request({
 					url: 'https://www.hhlqilongzhu.cn/api/dg_wyymusic.php',
@@ -122,7 +122,7 @@
 					// responseType: "json",
 					method: 'GET',
 					data: {
-						gm: aname,
+						gm: name,
 						type:'json',
 						n:index,
 						br:2,

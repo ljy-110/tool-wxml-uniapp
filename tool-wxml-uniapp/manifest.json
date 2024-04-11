@@ -60,7 +60,10 @@
             "scope.userLocation" : {
                 "desc" : "获取地方天气"
             }
-        }
+        },
+		"__usePrivacyCheck__" : true,
+		"resizable" : false,
+		"requiredPrivateInfos" : [ "getLocation", "chooseLocation" ]
     },
     "mp-alipay" : {
         "usingComponents" : true

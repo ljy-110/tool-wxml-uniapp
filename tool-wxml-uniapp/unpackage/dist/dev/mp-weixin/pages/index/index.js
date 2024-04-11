@@ -101,7 +101,7 @@ var components
 try {
   components = {
     uIcon: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-icon/u-icon */ "uni_modules/uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-icon/u-icon.vue */ 387))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-icon/u-icon */ "uni_modules/uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-icon/u-icon.vue */ 469))
     },
   }
 } catch (e) {
@@ -221,6 +221,21 @@ var _default = {
         icon: 'car',
         router: '/pageB/addressRes/addressRes'
       }, {
+        id: '43',
+        name: 'ICP备案',
+        icon: 'chat',
+        router: '/pageC/icpFiling/icpFiling'
+      }, {
+        id: '44',
+        name: '手机号归属',
+        icon: 'phone',
+        router: '/pageC/phoneOwnership/phoneOwnership'
+      }, {
+        id: '45',
+        name: '车牌号归属',
+        icon: 'car',
+        router: '/pageC/plateAffiliation/plateAffiliation'
+      }, {
         id: '37',
         name: '塔罗牌',
         icon: 'fingerprint',
@@ -320,6 +335,21 @@ var _default = {
         name: '图片素描',
         icon: 'photo',
         router: '/pageB/sketch/sketch'
+      }, {
+        id: '13',
+        name: 'Cosplay相册',
+        icon: 'photo',
+        router: '/pageC/cosplayPhoto/cosplayPhoto'
+      }, {
+        id: '49',
+        name: '初音未来',
+        icon: 'photo',
+        router: '/pageC/hatsuneMiku/hatsuneMiku'
+      }, {
+        id: '51',
+        name: '随机视频',
+        icon: 'play-circle',
+        router: '/pageC/sjVideo/sjVideo'
       }],
       address: '天河区',
       WeatherInfo: {}

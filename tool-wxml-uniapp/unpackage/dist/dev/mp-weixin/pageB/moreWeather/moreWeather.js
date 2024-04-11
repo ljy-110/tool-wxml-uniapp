@@ -101,10 +101,10 @@ var components
 try {
   components = {
     uRow: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-row/u-row */ "uni_modules/uview-ui/components/u-row/u-row").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-row/u-row.vue */ 451))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-row/u-row */ "uni_modules/uview-ui/components/u-row/u-row").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-row/u-row.vue */ 533))
     },
     uCol: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-col/u-col */ "uni_modules/uview-ui/components/u-col/u-col").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-col/u-col.vue */ 458))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-col/u-col */ "uni_modules/uview-ui/components/u-col/u-col").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-col/u-col.vue */ 540))
     },
   }
 } catch (e) {

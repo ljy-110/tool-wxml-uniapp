@@ -28,9 +28,9 @@
 			
 		</view>
 		
-		<u-modal v-model="showDetail" :title="titleDialog" :show-confirm-button="false"
-				:show-cancel-button="true" cancel-text="关闭"
-				 :content="content"></u-modal>
+		<u-modal v-model="showDetail" :title="titleDialog" :show-confirm-button="true"
+						:show-cancel-button="true" cancel-text="关闭" confirm-text="复制" @confirm="copyTextToClipboard"
+						 :content="content"></u-modal>
 	</view>
 </template>
 
@@ -141,7 +141,27 @@
 				this.titleDialog = item.title
 				this.content = item.link
 				this.showDetail = true;
-			}
+			},
+			copyTextToClipboard(){
+							let that = this
+							uni.setClipboardData({  
+								data: that.content,  
+								success: () => {  
+								  uni.showToast({  
+									title: '复制成功',  
+									icon: 'success',  
+									duration: 2000  
+								  });  
+								},  
+								fail: (err) => {  
+								  uni.showToast({  
+									title: '复制失败：' + err.errMsg,  
+									icon: 'none',  
+									duration: 2000  
+								  });  
+								}  
+							  });  
+						}
 		},
 
 	}

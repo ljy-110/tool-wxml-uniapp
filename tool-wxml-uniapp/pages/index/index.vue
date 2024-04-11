@@ -52,7 +52,18 @@
 						id:'4',name:'地址解析',icon:'car',
 						router:'/pageB/addressRes/addressRes'
 					},
-					
+					{
+						id:'43',name:'ICP备案',icon:'chat',
+						router:'/pageC/icpFiling/icpFiling'
+					},
+					{
+						id:'44',name:'手机号归属',icon:'phone',
+						router:'/pageC/phoneOwnership/phoneOwnership'
+					},
+					{
+						id:'45',name:'车牌号归属',icon:'car',
+						router:'/pageC/plateAffiliation/plateAffiliation'
+					},
 					{
 						id: '37',
 						name: '塔罗牌',
@@ -136,6 +147,19 @@
 					{
 						id:'13',name:'图片素描',icon:'photo',
 						router:'/pageB/sketch/sketch'
+					},
+					{
+						id:'13',name:'Cosplay相册',icon:'photo',
+						router:'/pageC/cosplayPhoto/cosplayPhoto'
+					},
+					
+					{
+						id:'49',name:'初音未来',icon:'photo',
+						router:'/pageC/hatsuneMiku/hatsuneMiku'
+					},
+					{
+						id:'51',name:'随机视频',icon:'play-circle',
+						router:'/pageC/sjVideo/sjVideo'
 					},
 					
 				],

@@ -101,7 +101,10 @@ var components
 try {
   components = {
     uInput: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-input/u-input */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-input/u-input")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-input/u-input.vue */ 429))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-input/u-input */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-input/u-input")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-input/u-input.vue */ 511))
+    },
+    uButton: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-button/u-button */ "uni_modules/uview-ui/components/u-button/u-button").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-button/u-button.vue */ 476))
     },
   }
 } catch (e) {
@@ -177,6 +180,7 @@ exports.default = void 0;
 //
 //
 //
+//
 var _default = {
   data: function data() {
     return {
@@ -207,6 +211,26 @@ var _default = {
       // 	content: e.target.errMsg,
       // 	showCancel: false
       // })
+    },
+    copyTextToClipboard: function copyTextToClipboard() {
+      var that = this;
+      uni.setClipboardData({
+        data: that.videoUrl,
+        success: function success() {
+          uni.showToast({
+            title: '复制成功',
+            icon: 'success',
+            duration: 2000
+          });
+        },
+        fail: function fail(err) {
+          uni.showToast({
+            title: '复制失败：' + err.errMsg,
+            icon: 'none',
+            duration: 2000
+          });
+        }
+      });
     },
     getApi: function getApi(op) {
       var that = this;

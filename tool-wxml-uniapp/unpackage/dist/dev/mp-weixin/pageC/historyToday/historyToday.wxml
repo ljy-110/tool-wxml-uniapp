@@ -1,0 +1,1 @@
+<view class="u-p-25 data-v-869b8e14"><view class="u-p-t-20 data-v-869b8e14">{{''+info.day+''}}</view><view class="u-p-t-20 data-v-869b8e14"><block wx:for="{{info.content}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="u-m-t-10 data-v-869b8e14">{{''+(index+1)+" 、 "+item+''}}</view></block></view></view>

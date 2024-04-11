@@ -99,7 +99,7 @@ var components
 try {
   components = {
     uSearch: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-search/u-search */ "uni_modules/uview-ui/components/u-search/u-search").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-search/u-search.vue */ 465))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-search/u-search */ "uni_modules/uview-ui/components/u-search/u-search").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-search/u-search.vue */ 547))
     },
   }
 } catch (e) {
