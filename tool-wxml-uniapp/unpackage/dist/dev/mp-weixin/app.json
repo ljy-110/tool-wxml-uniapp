@@ -68,7 +68,9 @@
         "dailyNews/dailyNews",
         "hatsuneMiku/hatsuneMiku",
         "slackDaily/slackDaily",
-        "sjVideo/sjVideo"
+        "sjVideo/sjVideo",
+        "randomSpeech/randomSpeech",
+        "signSeal/signSeal"
       ]
     }
   ],

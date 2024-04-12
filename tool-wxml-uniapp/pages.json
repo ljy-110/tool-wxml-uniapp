@@ -526,6 +526,30 @@
 					"navigationBarTitleText" : "随机视频",
 					"enablePullDownRefresh" : false
 				}
+			},
+			{
+				"path" : "randomSpeech/randomSpeech",
+				"style" : 
+				{
+					"navigationBarTitleText" : "随机语音",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "signSeal/signSeal",
+				"style" : 
+				{
+					"navigationBarTitleText" : "签名设计",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "bookAnswers/bookAnswers",
+				"style" : 
+				{
+					"navigationBarTitleText" : "答案之书",
+					"enablePullDownRefresh" : false
+				}
 			}]
 		}
 	]

@@ -259,6 +259,16 @@ var _default = {
         name: '星座运势',
         icon: 'star',
         router: '/pageC/horoscope/horoscope'
+      }, {
+        id: '500',
+        name: '随机语音',
+        icon: 'volume-up',
+        router: '/pageC/randomSpeech/randomSpeech'
+      }, {
+        id: '500',
+        name: '签名设计',
+        icon: 'volume-up',
+        router: '/pageC/signSeal/signSeal'
       }],
       menuList: []
     };

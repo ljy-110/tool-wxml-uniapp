@@ -129,6 +129,18 @@
 						id:'49',name:'星座运势',icon:'star',
 						router:'/pageC/horoscope/horoscope'
 					},
+					{
+						id:'500',name:'随机语音',icon:'volume-up',
+						router:'/pageC/randomSpeech/randomSpeech'
+					},
+					{
+						id:'500',name:'签名设计',icon:'thumb-up',
+						router:'/pageC/signSeal/signSeal'
+					},
+					{
+						id:'50',name:'答案之书',icon:'thumb-up',
+						router:'/pageC/bookAnswers/bookAnswers'
+					},
 				],
 				menuList:[]
 			};
