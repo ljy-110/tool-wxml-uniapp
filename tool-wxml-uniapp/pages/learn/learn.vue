@@ -17,7 +17,7 @@
 		data() {
 			return {
 				list:['我被生活磨光了棱角，简单的说就是，我被生活盘了。','我被生活磨光了棱角，简单的说就是，我被生活盘了。'],
-				menuList: [{
+				menuList2: [{
 						id: '7',
 						name: '随机文案',
 						icon: 'file-text',
@@ -84,7 +84,7 @@
 						router: '/pageB/overlord/overlord'
 					},
 					{
-						id: '34',
+						id: '500',
 						name: '60秒读世界',
 						icon: 'thumb-up',
 						router: '/pageB/readingParty/readingParty'
@@ -129,7 +129,8 @@
 						id:'49',name:'星座运势',icon:'star',
 						router:'/pageC/horoscope/horoscope'
 					},
-				]
+				],
+				menuList:[]
 			};
 		},
 		beforeCreated() {},
@@ -141,6 +142,13 @@
 		created() {},
 		mounted() {},
 		onShow() {
+			this.menuList = []
+			this.wx_shenhe = uni.getStorageSync('wx_shenhe');
+			if (this.wx_shenhe == '0') {
+				this.menuList = this.menuList2
+			}else{
+				this.menuList = this.menuList2.filter(item => item.id != '500')
+			}
 			this.getApi()
 		},
 		methods: {

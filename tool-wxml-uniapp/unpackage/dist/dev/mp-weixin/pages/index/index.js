@@ -197,10 +197,13 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
 var _default = {
   data: function data() {
     return {
-      menuList: [{
+      menuList2: [{
         id: '1',
         name: 'IP查询',
         icon: 'wifi',
@@ -241,17 +244,17 @@ var _default = {
         icon: 'fingerprint',
         router: '/pageB/tarot/tarot'
       }, {
-        id: '38',
+        id: '500',
         name: '搞笑视频',
         icon: 'skip-forward-right',
         router: '/pageB/crayonShinChan/crayonShinChan'
       }, {
-        id: '28',
+        id: '5',
         name: '热搜榜',
         icon: 'order',
         router: '/pageB/hotSearch/hotSearch'
       }, {
-        id: '35',
+        id: '500',
         name: '网盘资源',
         icon: 'download',
         router: '/pageB/webResource/webResource'
@@ -261,17 +264,17 @@ var _default = {
         icon: 'photo',
         router: '/pageB/randomPattern/randomPattern'
       }, {
-        id: '8',
+        id: '500',
         name: '随机热歌',
         icon: 'volume-up',
         router: '/pageB/randomSong/randomSong'
       }, {
-        id: '14',
+        id: '500',
         name: '网易云歌单',
         icon: 'rewind-right',
         router: '/pageB/neteaseCloud/neteaseCloud'
       }, {
-        id: '22',
+        id: '500',
         name: '网易云音乐',
         icon: 'volume-up',
         router: '/pageB/wyMusic/wyMusic'
@@ -281,32 +284,32 @@ var _default = {
         icon: 'photo',
         router: '/pageB/profilePhoto/profilePhoto'
       }, {
-        id: '16',
+        id: '500',
         name: '短剧搜索',
         icon: 'play-circle',
         router: '/pageB/playlet/playlet'
       }, {
-        id: '21',
+        id: '500',
         name: '快看漫画',
         icon: 'file-text',
         router: '/pageB/kuaikanComics/kuaikanComics'
       }, {
-        id: '17',
+        id: '500',
         name: '小说搜索',
         icon: 'edit-pen',
         router: '/pageB/novelSearch/novelSearch'
       }, {
-        id: '19',
+        id: '500',
         name: '动漫搜索',
         icon: 'android-fill',
         router: '/pageB/cartoon/cartoon'
       }, {
-        id: '20',
+        id: '500',
         name: '音乐搜索',
         icon: 'search',
         router: '/pageB/musicSearch/musicSearch'
       }, {
-        id: '20',
+        id: '500',
         name: 'QQ音乐',
         icon: 'volume',
         router: '/pageB/qqMusic/qqMusic'
@@ -346,17 +349,30 @@ var _default = {
         icon: 'photo',
         router: '/pageC/hatsuneMiku/hatsuneMiku'
       }, {
-        id: '51',
+        id: '500',
         name: '随机视频',
         icon: 'play-circle',
         router: '/pageC/sjVideo/sjVideo'
       }],
+      menuList: [],
       address: '天河区',
-      WeatherInfo: {}
+      WeatherInfo: {},
+      wx_shenhe: null
     };
   },
   onLoad: function onLoad() {
     this.getLocalIP();
+  },
+  onShow: function onShow() {
+    this.menuList = [];
+    this.wx_shenhe = uni.getStorageSync('wx_shenhe');
+    if (this.wx_shenhe == '0') {
+      this.menuList = this.menuList2;
+    } else {
+      this.menuList = this.menuList2.filter(function (item) {
+        return item.id != '500';
+      });
+    }
   },
   methods: {
     toRouter: function toRouter(url) {

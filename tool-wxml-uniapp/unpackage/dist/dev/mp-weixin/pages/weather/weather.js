@@ -615,9 +615,7 @@ var _default = {
         withCredentials: false,
         firstIpv4: false,
         success: function success(res) {
-          console.log(res);
           if (res.data.code == 200) {
-            // that.ipData = res.data.result
             that.airQualityInfo = res.data.now;
           } else {
             uni.showToast({

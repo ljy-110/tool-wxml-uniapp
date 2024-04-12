@@ -164,7 +164,7 @@ var _default = {
   data: function data() {
     return {
       list: ['我被生活磨光了棱角，简单的说就是，我被生活盘了。', '我被生活磨光了棱角，简单的说就是，我被生活盘了。'],
-      menuList: [{
+      menuList2: [{
         id: '7',
         name: '随机文案',
         icon: 'file-text',
@@ -220,7 +220,7 @@ var _default = {
         icon: 'file-text',
         router: '/pageB/overlord/overlord'
       }, {
-        id: '34',
+        id: '500',
         name: '60秒读世界',
         icon: 'thumb-up',
         router: '/pageB/readingParty/readingParty'
@@ -259,7 +259,8 @@ var _default = {
         name: '星座运势',
         icon: 'star',
         router: '/pageC/horoscope/horoscope'
-      }]
+      }],
+      menuList: []
     };
   },
   beforeCreated: function beforeCreated() {},
@@ -271,6 +272,15 @@ var _default = {
   created: function created() {},
   mounted: function mounted() {},
   onShow: function onShow() {
+    this.menuList = [];
+    this.wx_shenhe = uni.getStorageSync('wx_shenhe');
+    if (this.wx_shenhe == '0') {
+      this.menuList = this.menuList2;
+    } else {
+      this.menuList = this.menuList2.filter(function (item) {
+        return item.id != '500';
+      });
+    }
     this.getApi();
   },
   methods: {

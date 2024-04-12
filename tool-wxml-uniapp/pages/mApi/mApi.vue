@@ -1,6 +1,6 @@
 <template>
 	<view class="u-p-15">
-		<view v-for="(item,index) in list" :key="index" class="item-box">
+		<view v-for="(item,index) in list" :key="index" class="item-box" @click="toRS(item)">
 			<view class="title">
 				{{item.urlName}}
 			</view>
@@ -11,9 +11,12 @@
 				地址：{{item.urlPath}}
 			</view>
 		</view>
-		
+
 		<u-empty text="暂无数据" mode="list" v-if="list.length == 0"></u-empty>
 		<u-loadmore :status="status" :icon-type="iconType" :load-text="loadText" />
+
+		<u-modal v-model="showDetail" :title="titleDialog" :show-confirm-button="true" :show-cancel-button="true"
+			cancel-text="关闭" confirm-text="复制" @confirm="copyTextToClipboard" :content="content"></u-modal>
 	</view>
 </template>
 
@@ -136,6 +139,9 @@
 					loading: '努力加载中',
 					nomore: '实在没有了'
 				},
+				titleDialog: '',
+				content: '',
+				showDetail: false
 			};
 		},
 		beforeCreated() {},
@@ -211,6 +217,31 @@
 					complete() {},
 				});
 			},
+			toRS(item) {
+				this.titleDialog = item.urlName
+				this.content = '地址：' + item.urlPath + ''
+				this.showDetail = true
+			},
+			copyTextToClipboard() {
+				let that = this
+				uni.setClipboardData({
+					data: that.content,
+					success: () => {
+						uni.showToast({
+							title: '复制成功',
+							icon: 'success',
+							duration: 2000
+						});
+					},
+					fail: (err) => {
+						uni.showToast({
+							title: '复制失败：' + err.errMsg,
+							icon: 'none',
+							duration: 2000
+						});
+					}
+				});
+			}
 		},
 
 	}

@@ -21,12 +21,15 @@
 			</view>
 		</view>
 		<view class="grid__4k u-m-t-50">
-			<view v-for="(item,index) in menuList" :key="index" class="u-p-20 menu-item" @click="toRouter(item.router)">
-				<view class="">
-					<u-icon :name="item.icon" color="#2979ff" size="65"></u-icon>
-					<view class="">{{item.name}}</view>
+			<view v-for="(item,index) in menuList" :key="index">
+				<view class="u-p-20 menu-item" @click="toRouter(item.router)">
+					<view class="">
+						<u-icon :name="item.icon" color="#2979ff" size="65"></u-icon>
+						<view class="">{{item.name}}</view>
+					</view>
 				</view>
 			</view>
+			
 		</view>
 	</view>
 </template>
@@ -35,7 +38,7 @@
 	export default {
 		data() {
 			return {
-				menuList:[
+				menuList2:[
 					{
 						id:'1',name:'IP查询',icon:'wifi',
 						router:'/pageB/searchIP/searchIP'
@@ -71,15 +74,15 @@
 						router: '/pageB/tarot/tarot'
 					},
 					{
-						id:'38',name:'搞笑视频',icon:'skip-forward-right',
+						id:'500',name:'搞笑视频',icon:'skip-forward-right',
 						router:'/pageB/crayonShinChan/crayonShinChan'
 					},
 					{
-						id:'28',name:'热搜榜',icon:'order',
+						id:'5',name:'热搜榜',icon:'order',
 						router:'/pageB/hotSearch/hotSearch'
 					},
 					{
-						id:'35',name:'网盘资源',icon:'download',
+						id:'500',name:'网盘资源',icon:'download',
 						router:'/pageB/webResource/webResource'
 					},
 					{
@@ -88,15 +91,15 @@
 					},
 					
 					{
-						id:'8',name:'随机热歌',icon:'volume-up',
+						id:'500',name:'随机热歌',icon:'volume-up',
 						router:'/pageB/randomSong/randomSong'
 					},
 					{
-						id:'14',name:'网易云歌单',icon:'rewind-right',
+						id:'500',name:'网易云歌单',icon:'rewind-right',
 						router:'/pageB/neteaseCloud/neteaseCloud'
 					},
 					{
-						id:'22',name:'网易云音乐',icon:'volume-up',
+						id:'500',name:'网易云音乐',icon:'volume-up',
 						router:'/pageB/wyMusic/wyMusic'
 					},
 					
@@ -105,27 +108,27 @@
 						router:'/pageB/profilePhoto/profilePhoto'
 					},
 					{
-						id:'16',name:'短剧搜索',icon:'play-circle',
+						id:'500',name:'短剧搜索',icon:'play-circle',
 						router:'/pageB/playlet/playlet'
 					},
 					{
-						id:'21',name:'快看漫画',icon:'file-text',
+						id:'500',name:'快看漫画',icon:'file-text',
 						router:'/pageB/kuaikanComics/kuaikanComics'
 					},
 					{
-						id:'17',name:'小说搜索',icon:'edit-pen',
+						id:'500',name:'小说搜索',icon:'edit-pen',
 						router:'/pageB/novelSearch/novelSearch'
 					},
 					{
-						id:'19',name:'动漫搜索',icon:'android-fill',
+						id:'500',name:'动漫搜索',icon:'android-fill',
 						router:'/pageB/cartoon/cartoon'
 					},
 					{
-						id:'20',name:'音乐搜索',icon:'search',
+						id:'500',name:'音乐搜索',icon:'search',
 						router:'/pageB/musicSearch/musicSearch'
 					},
 					{
-						id:'20',name:'QQ音乐',icon:'volume',
+						id:'500',name:'QQ音乐',icon:'volume',
 						router:'/pageB/qqMusic/qqMusic'
 					},
 					{
@@ -158,17 +161,28 @@
 						router:'/pageC/hatsuneMiku/hatsuneMiku'
 					},
 					{
-						id:'51',name:'随机视频',icon:'play-circle',
+						id:'500',name:'随机视频',icon:'play-circle',
 						router:'/pageC/sjVideo/sjVideo'
 					},
 					
 				],
+				menuList:[],
 				address:'天河区',
-				WeatherInfo:{}
+				WeatherInfo:{},
+				wx_shenhe:null
 			}
 		},
 		onLoad() {
 			this.getLocalIP();
+		},
+		onShow() {
+			this.menuList = []
+			this.wx_shenhe = uni.getStorageSync('wx_shenhe');
+			if (this.wx_shenhe == '0') {
+				this.menuList = this.menuList2
+			}else{
+				this.menuList = this.menuList2.filter(item => item.id != '500')
+			}
 		},
 		methods: {
 			toRouter(url){

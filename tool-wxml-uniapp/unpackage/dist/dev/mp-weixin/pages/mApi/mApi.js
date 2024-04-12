@@ -106,6 +106,9 @@ try {
     uLoadmore: function () {
       return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-loadmore/u-loadmore */ "uni_modules/uview-ui/components/u-loadmore/u-loadmore").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-loadmore/u-loadmore.vue */ 504))
     },
+    uModal: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-modal/u-modal */ "uni_modules/uview-ui/components/u-modal/u-modal").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-modal/u-modal.vue */ 483))
+    },
   }
 } catch (e) {
   if (
@@ -176,6 +179,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+//
+//
+//
 //
 //
 //
@@ -304,7 +310,10 @@ var _default = {
         loadmore: '轻轻上拉',
         loading: '努力加载中',
         nomore: '实在没有了'
-      }
+      },
+      titleDialog: '',
+      content: '',
+      showDetail: false
     };
   },
   beforeCreated: function beforeCreated() {},
@@ -377,6 +386,31 @@ var _default = {
           });
         },
         complete: function complete() {}
+      });
+    },
+    toRS: function toRS(item) {
+      this.titleDialog = item.urlName;
+      this.content = '地址：' + item.urlPath + '';
+      this.showDetail = true;
+    },
+    copyTextToClipboard: function copyTextToClipboard() {
+      var that = this;
+      uni.setClipboardData({
+        data: that.content,
+        success: function success() {
+          uni.showToast({
+            title: '复制成功',
+            icon: 'success',
+            duration: 2000
+          });
+        },
+        fail: function fail(err) {
+          uni.showToast({
+            title: '复制失败：' + err.errMsg,
+            icon: 'none',
+            duration: 2000
+          });
+        }
       });
     }
   }
