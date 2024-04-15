@@ -57,6 +57,10 @@
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
+.grid__2k_none.data-v-45919a50 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(45%, 1fr));
+}
 .menu-item.data-v-45919a50 {
   text-align: center;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);

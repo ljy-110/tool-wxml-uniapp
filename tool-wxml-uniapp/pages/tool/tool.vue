@@ -9,6 +9,17 @@
 		<view class="u-p-20 ">
 			<u-button type="primary">换一张</u-button>
 		</view>
+		
+		<!-- <u-popup v-model="showWord" mode="bottom" border-radius="14" height="500px" closeable>
+			<scroll-view scroll-y="true" style="height: 500px;">
+				<view v-for="(item,index) in wordList" :key="index" class="u-p-15" @click="toMusic(item,index+1)">
+					<view class="">
+						{{item}}
+					</view>
+				</view>
+			</scroll-view>
+			
+		</u-popup> -->
 	</view>
 </template>
 

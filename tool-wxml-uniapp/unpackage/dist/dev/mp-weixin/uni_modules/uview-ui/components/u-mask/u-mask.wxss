@@ -57,6 +57,10 @@
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
+.grid__2k_none.data-v-9c19d32e {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(45%, 1fr));
+}
 .u-mask.data-v-9c19d32e {
   position: fixed;
   top: 0;

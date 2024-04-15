@@ -12610,7 +12610,67 @@ function addUnit() {
 
 /***/ }),
 
-/***/ 516:
+/***/ 52:
+/*!******************************************************************************************************!*\
+  !*** E:/ljy/小程序/tool/tool-wxml-uniapp/tool-wxml-uniapp/uni_modules/uview-ui/libs/function/random.js ***!
+  \******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+function random(min, max) {
+  if (min >= 0 && max > 0 && max >= min) {
+    var gab = max - min + 1;
+    return Math.floor(Math.random() * gab + min);
+  } else {
+    return 0;
+  }
+}
+var _default = random;
+exports.default = _default;
+
+/***/ }),
+
+/***/ 53:
+/*!****************************************************************************************************!*\
+  !*** E:/ljy/小程序/tool/tool-wxml-uniapp/tool-wxml-uniapp/uni_modules/uview-ui/libs/function/trim.js ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+function trim(str) {
+  var pos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'both';
+  if (pos == 'both') {
+    return str.replace(/^\s+|\s+$/g, "");
+  } else if (pos == "left") {
+    return str.replace(/^\s*/, '');
+  } else if (pos == 'right') {
+    return str.replace(/(\s*$)/g, "");
+  } else if (pos == 'all') {
+    return str.replace(/\s+/g, "");
+  } else {
+    return str;
+  }
+}
+var _default = trim;
+exports.default = _default;
+
+/***/ }),
+
+/***/ 536:
 /*!***************************************************************************************************!*\
   !*** E:/ljy/小程序/tool/tool-wxml-uniapp/tool-wxml-uniapp/uni_modules/uview-ui/libs/util/emitter.js ***!
   \***************************************************************************************************/
@@ -12675,66 +12735,6 @@ var _default = {
     }
   }
 };
-exports.default = _default;
-
-/***/ }),
-
-/***/ 52:
-/*!******************************************************************************************************!*\
-  !*** E:/ljy/小程序/tool/tool-wxml-uniapp/tool-wxml-uniapp/uni_modules/uview-ui/libs/function/random.js ***!
-  \******************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-function random(min, max) {
-  if (min >= 0 && max > 0 && max >= min) {
-    var gab = max - min + 1;
-    return Math.floor(Math.random() * gab + min);
-  } else {
-    return 0;
-  }
-}
-var _default = random;
-exports.default = _default;
-
-/***/ }),
-
-/***/ 53:
-/*!****************************************************************************************************!*\
-  !*** E:/ljy/小程序/tool/tool-wxml-uniapp/tool-wxml-uniapp/uni_modules/uview-ui/libs/function/trim.js ***!
-  \****************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-function trim(str) {
-  var pos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'both';
-  if (pos == 'both') {
-    return str.replace(/^\s+|\s+$/g, "");
-  } else if (pos == "left") {
-    return str.replace(/^\s*/, '');
-  } else if (pos == 'right') {
-    return str.replace(/(\s*$)/g, "");
-  } else if (pos == 'all') {
-    return str.replace(/\s+/g, "");
-  } else {
-    return str;
-  }
-}
-var _default = trim;
 exports.default = _default;
 
 /***/ }),
@@ -12873,7 +12873,81 @@ function $parent() {
 
 /***/ }),
 
-/***/ 566:
+/***/ 57:
+/*!***************************************************************************************************!*\
+  !*** E:/ljy/小程序/tool/tool-wxml-uniapp/tool-wxml-uniapp/uni_modules/uview-ui/libs/function/sys.js ***!
+  \***************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.os = os;
+exports.sys = sys;
+function os() {
+  return uni.getSystemInfoSync().platform;
+}
+;
+function sys() {
+  return uni.getSystemInfoSync();
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+
+/***/ 58:
+/*!********************************************************************************************************!*\
+  !*** E:/ljy/小程序/tool/tool-wxml-uniapp/tool-wxml-uniapp/uni_modules/uview-ui/libs/function/debounce.js ***!
+  \********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var timeout = null;
+
+/**
+ * 防抖原理：一定时间内，只有最后一次操作，再过wait毫秒后才执行函数
+ * 
+ * @param {Function} func 要执行的回调函数 
+ * @param {Number} wait 延时的时间
+ * @param {Boolean} immediate 是否立即执行 
+ * @return null
+ */
+function debounce(func) {
+  var wait = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
+  var immediate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+  // 清除定时器
+  if (timeout !== null) clearTimeout(timeout);
+  // 立即执行，此类情况一般用不到
+  if (immediate) {
+    var callNow = !timeout;
+    timeout = setTimeout(function () {
+      timeout = null;
+    }, wait);
+    if (callNow) typeof func === 'function' && func();
+  } else {
+    // 设置定时器，当最后一次操作后，timeout不会再被清除，所以在延时wait毫秒后执行func回调方法
+    timeout = setTimeout(function () {
+      typeof func === 'function' && func();
+    }, wait);
+  }
+}
+var _default = debounce;
+exports.default = _default;
+
+/***/ }),
+
+/***/ 586:
 /*!***********************************************************************************************************!*\
   !*** E:/ljy/小程序/tool/tool-wxml-uniapp/tool-wxml-uniapp/uni_modules/uview-ui/libs/util/async-validator.js ***!
   \***********************************************************************************************************/
@@ -14052,80 +14126,6 @@ Schema.messages = messages;
 var _default = Schema;
 exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/node-libs-browser/mock/process.js */ 157)))
-
-/***/ }),
-
-/***/ 57:
-/*!***************************************************************************************************!*\
-  !*** E:/ljy/小程序/tool/tool-wxml-uniapp/tool-wxml-uniapp/uni_modules/uview-ui/libs/function/sys.js ***!
-  \***************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.os = os;
-exports.sys = sys;
-function os() {
-  return uni.getSystemInfoSync().platform;
-}
-;
-function sys() {
-  return uni.getSystemInfoSync();
-}
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-
-/***/ 58:
-/*!********************************************************************************************************!*\
-  !*** E:/ljy/小程序/tool/tool-wxml-uniapp/tool-wxml-uniapp/uni_modules/uview-ui/libs/function/debounce.js ***!
-  \********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var timeout = null;
-
-/**
- * 防抖原理：一定时间内，只有最后一次操作，再过wait毫秒后才执行函数
- * 
- * @param {Function} func 要执行的回调函数 
- * @param {Number} wait 延时的时间
- * @param {Boolean} immediate 是否立即执行 
- * @return null
- */
-function debounce(func) {
-  var wait = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
-  var immediate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-  // 清除定时器
-  if (timeout !== null) clearTimeout(timeout);
-  // 立即执行，此类情况一般用不到
-  if (immediate) {
-    var callNow = !timeout;
-    timeout = setTimeout(function () {
-      timeout = null;
-    }, wait);
-    if (callNow) typeof func === 'function' && func();
-  } else {
-    // 设置定时器，当最后一次操作后，timeout不会再被清除，所以在延时wait毫秒后执行func回调方法
-    timeout = setTimeout(function () {
-      typeof func === 'function' && func();
-    }, wait);
-  }
-}
-var _default = debounce;
-exports.default = _default;
 
 /***/ }),
 

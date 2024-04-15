@@ -80,10 +80,10 @@ var components
 try {
   components = {
     uNoticeBar: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-notice-bar/u-notice-bar */ "uni_modules/uview-ui/components/u-notice-bar/u-notice-bar").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-notice-bar/u-notice-bar.vue */ 490))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-notice-bar/u-notice-bar */ "uni_modules/uview-ui/components/u-notice-bar/u-notice-bar").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-notice-bar/u-notice-bar.vue */ 510))
     },
     uIcon: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-icon/u-icon */ "uni_modules/uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-icon/u-icon.vue */ 469))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-icon/u-icon */ "uni_modules/uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-icon/u-icon.vue */ 489))
     },
   }
 } catch (e) {
@@ -267,8 +267,23 @@ var _default = {
       }, {
         id: '500',
         name: '签名设计',
-        icon: 'volume-up',
+        icon: 'photo',
         router: '/pageC/signSeal/signSeal'
+      }, {
+        id: '50',
+        name: '答案之书',
+        icon: 'question',
+        router: '/pageC/bookAnswers/bookAnswers'
+      }, {
+        id: '50',
+        name: '菜谱大全',
+        icon: 'hourglass',
+        router: '/pageC/cookbook/cookbook'
+      }, {
+        id: '60',
+        name: '开心一刻',
+        icon: 'file-text',
+        router: '/pageC/funnyCrossTalk/funnyCrossTalk'
       }],
       menuList: []
     };
@@ -313,9 +328,12 @@ var _default = {
         withCredentials: false,
         firstIpv4: false,
         success: function success(res) {
-          that.list = [];
-          that.list.push(res.data[0].wangyiyunreping);
-          that.list.push(res.data[0].wangyiyunreping);
+          if (res.data[0].wangyiyunreping) {
+            that.list = [];
+            that.list.push(res.data[0].wangyiyunreping);
+            that.list.push(res.data[0].wangyiyunreping);
+          } else {}
+
           // uni.hideLoading();
           // if (res.data.code == 200) {
           // 	let parts = res.data.split('\n');

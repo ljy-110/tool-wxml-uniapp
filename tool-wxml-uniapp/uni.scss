@@ -112,4 +112,8 @@ $uni-font-size-paragraph:15px;
 	white-space:pre-wrap;
 	overflow-wrap:anywhere;
 }
+.grid__2k_none{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(45%, 1fr));
+}
 $uni-font-weight:bold;

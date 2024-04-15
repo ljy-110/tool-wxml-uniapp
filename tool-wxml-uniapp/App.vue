@@ -8,8 +8,8 @@
 			// {"configCode":"wx_shenhe","configValue":"1"// 0开启、1关闭}
 			uni.showLoading({title:'加载中...'})
 			uni.request({
-				url: 'https://zhgdxcx.ccqm.cn:8001/bigdata/loginRest/systemConfig/0',
-				// dataType: "json",
+				url: 'https://zhgdxcx.ccqm.cn:8001/bigdata/loginRest/systemConfig/3',
+				dataType: "json",
 				// responseType: "json",
 				method: 'GET',
 				data: {},
@@ -17,10 +17,12 @@
 				sslVerify: false,
 				withCredentials: false,
 				firstIpv4: false,
+				headers:{
+					'Cache-Control': 'no-cache'
+				},
 				success(res) {
 					console.log(res);
 					if (res.data.success) {
-						
 						uni.setStorageSync('wx_shenhe', res.data.data.wx_shenhe);// 0开启、1关闭
 						uni.showToast({
 							title: '欢迎您'+res.data.data.wx_shenhe,

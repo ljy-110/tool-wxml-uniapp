@@ -57,6 +57,10 @@
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
+.grid__2k_none.data-v-3bda0f19 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(45%, 1fr));
+}
 .u-notice-bar.data-v-3bda0f19 {
   width: 100%;
   display: flex;

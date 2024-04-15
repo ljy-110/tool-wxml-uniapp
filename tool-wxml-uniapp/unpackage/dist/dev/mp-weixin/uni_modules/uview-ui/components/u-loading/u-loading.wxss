@@ -57,6 +57,10 @@
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
+.grid__2k_none.data-v-409a4a1a {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(45%, 1fr));
+}
 .u-loading-circle.data-v-409a4a1a {
   display: inline-flex;
   vertical-align: middle;

@@ -101,7 +101,7 @@ var components
 try {
   components = {
     uIcon: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-icon/u-icon */ "uni_modules/uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-icon/u-icon.vue */ 469))
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-icon/u-icon */ "uni_modules/uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-icon/u-icon.vue */ 489))
     },
   }
 } catch (e) {
@@ -164,6 +164,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+//
+//
+//
+//
 //
 //
 //
@@ -353,6 +357,21 @@ var _default = {
         name: '随机视频',
         icon: 'play-circle',
         router: '/pageC/sjVideo/sjVideo'
+      }, {
+        id: '50',
+        name: '车辆信息',
+        icon: 'car',
+        router: '/pageC/vehicleInfo/vehicleInfo'
+      }, {
+        id: '500',
+        name: '企业查询',
+        icon: 'info-circle',
+        router: '/pageC/companyInfo/companyInfo'
+      }, {
+        id: '50',
+        name: '汇率换算',
+        icon: 'rmb-circle',
+        router: '/pageC/currencyConversion/currencyConversion'
       }],
       menuList: [],
       address: '天河区',

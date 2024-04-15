@@ -166,13 +166,20 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
       // https://api.8uid.cn/qc.php?type=video
       videoUrl: 'https://jx.iqfk.top/api/sjsp.php',
       videoUrl2: '',
-      videoUrl3: 'https://mnapi.cn/nvda.php?type=video'
+      videoUrl3: 'https://mnapi.cn/nvda.php?type=video',
+      videoUrl4: 'https://api.walsm.cn/api/mnbz'
     };
   },
   beforeCreated: function beforeCreated() {},

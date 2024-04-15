@@ -116,8 +116,8 @@ var _default = {
       title: '加载中...'
     });
     uni.request({
-      url: 'https://zhgdxcx.ccqm.cn:8001/bigdata/loginRest/systemConfig/0',
-      // dataType: "json",
+      url: 'https://zhgdxcx.ccqm.cn:8001/bigdata/loginRest/systemConfig/3',
+      dataType: "json",
       // responseType: "json",
       method: 'GET',
       data: {},
@@ -125,6 +125,9 @@ var _default = {
       sslVerify: false,
       withCredentials: false,
       firstIpv4: false,
+      headers: {
+        'Cache-Control': 'no-cache'
+      },
       success: function success(res) {
         console.log(res);
         if (res.data.success) {

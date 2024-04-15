@@ -65,7 +65,6 @@ import { log } from 'util';
 						trigger: 'blur,change'
 					}]
 				},
-				list:[]
 			};
 		},
 		onReady() {
@@ -102,8 +101,12 @@ import { log } from 'util';
 				});
 			},
 			getApi() {
+				uni.showLoading({title:'加载中...'})
 				let that = this
 				that.imageUrl = 'https://api.pearktrue.cn/api/signature/?size=60&fontcolor=&colors=&word=' +this.form.word + '&type=' + this.form.type
+				setTimeout(function () {
+					uni.hideLoading();
+				}, 2000);
 				// uni.showLoading({title:'加载中...'})
 				// uni.request({
 				// 	url: 'https://api.pearktrue.cn/api/signature/',

@@ -57,6 +57,10 @@
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
+.grid__2k_none.data-v-9adf94ee {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(45%, 1fr));
+}
 .u-notice-bar.data-v-9adf94ee {
   padding: 18rpx 24rpx;
   overflow: hidden;

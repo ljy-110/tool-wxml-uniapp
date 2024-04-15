@@ -57,6 +57,10 @@
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
+.grid__2k_none.data-v-b899c4c0 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(45%, 1fr));
+}
 #myVideo.data-v-b899c4c0 {
   width: 100%;
 }

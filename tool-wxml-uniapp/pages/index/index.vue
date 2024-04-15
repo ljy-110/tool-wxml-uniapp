@@ -31,6 +31,10 @@
 			</view>
 			
 		</view>
+		
+		<view class="u-font-12 u-text-center u-p-20" style="color: #ccc;">
+			粤ICP备2024232287号
+		</view>
 	</view>
 </template>
 
@@ -163,6 +167,18 @@
 					{
 						id:'500',name:'随机视频',icon:'play-circle',
 						router:'/pageC/sjVideo/sjVideo'
+					},
+					{
+						id:'50',name:'车辆信息',icon:'car',
+						router:'/pageC/vehicleInfo/vehicleInfo'
+					},
+					{
+						id:'500',name:'企业查询',icon:'info-circle',
+						router:'/pageC/companyInfo/companyInfo'
+					},
+					{
+						id:'50',name:'汇率换算',icon:'rmb-circle',
+						router:'/pageC/currencyConversion/currencyConversion'
 					},
 					
 				],

@@ -550,6 +550,46 @@
 					"navigationBarTitleText" : "答案之书",
 					"enablePullDownRefresh" : false
 				}
+			},
+			{
+				"path" : "cookbook/cookbook",
+				"style" : 
+				{
+					"navigationBarTitleText" : "菜谱大全",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "vehicleInfo/vehicleInfo",
+				"style" : 
+				{
+					"navigationBarTitleText" : "车辆信息查询",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "companyInfo/companyInfo",
+				"style" : 
+				{
+					"navigationBarTitleText" : "企业查询",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "funnyCrossTalk/funnyCrossTalk",
+				"style" : 
+				{
+					"navigationBarTitleText" : "开心一刻",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "currencyConversion/currencyConversion",
+				"style" : 
+				{
+					"navigationBarTitleText" : "货币转换",
+					"enablePullDownRefresh" : false
+				}
 			}]
 		}
 	]

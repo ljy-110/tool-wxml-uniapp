@@ -743,6 +743,10 @@
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
+.grid__2k_none.data-v-2ee87dc9 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(45%, 1fr));
+}
 .u-icon.data-v-2ee87dc9 {
   display: inline-flex;
   align-items: center;

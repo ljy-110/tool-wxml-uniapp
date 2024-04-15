@@ -70,7 +70,13 @@
         "slackDaily/slackDaily",
         "sjVideo/sjVideo",
         "randomSpeech/randomSpeech",
-        "signSeal/signSeal"
+        "signSeal/signSeal",
+        "bookAnswers/bookAnswers",
+        "cookbook/cookbook",
+        "vehicleInfo/vehicleInfo",
+        "companyInfo/companyInfo",
+        "funnyCrossTalk/funnyCrossTalk",
+        "currencyConversion/currencyConversion"
       ]
     }
   ],

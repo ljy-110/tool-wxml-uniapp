@@ -134,12 +134,20 @@
 						router:'/pageC/randomSpeech/randomSpeech'
 					},
 					{
-						id:'500',name:'签名设计',icon:'thumb-up',
+						id:'500',name:'签名设计',icon:'photo',
 						router:'/pageC/signSeal/signSeal'
 					},
 					{
-						id:'50',name:'答案之书',icon:'thumb-up',
+						id:'50',name:'答案之书',icon:'question',
 						router:'/pageC/bookAnswers/bookAnswers'
+					},
+					{
+						id:'50',name:'菜谱大全',icon:'hourglass',
+						router:'/pageC/cookbook/cookbook'
+					},
+					{
+						id:'60',name:'开心一刻',icon:'file-text',
+						router:'/pageC/funnyCrossTalk/funnyCrossTalk'
 					},
 				],
 				menuList:[]
@@ -183,9 +191,14 @@
 					withCredentials: false,
 					firstIpv4: false,
 					success(res) {
-						that.list = []
-						that.list.push(res.data[0].wangyiyunreping)
-						that.list.push(res.data[0].wangyiyunreping)
+						if (res.data[0].wangyiyunreping) {
+							that.list = []
+							that.list.push(res.data[0].wangyiyunreping)
+							that.list.push(res.data[0].wangyiyunreping)
+						} else{
+							
+						}
+						
 						// uni.hideLoading();
 						// if (res.data.code == 200) {
 						// 	let parts = res.data.split('\n');

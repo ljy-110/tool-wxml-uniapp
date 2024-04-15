@@ -4,11 +4,17 @@
 			视频1
 		</view>
 		<!-- <view class="">{{name}}</view> -->
+		<video id="myVideo" :src="videoUrl4" @error="videoErrorCallback" 
+		 enable-danmu danmu-btn controls></video>
+		<view class="u-p-t-20">
+			视频2
+		</view>
+		<!-- <view class="">{{name}}</view> -->
 		<video id="myVideo" :src="videoUrl" @error="videoErrorCallback" 
 		 enable-danmu danmu-btn controls></video>
 		 
 		 <view class="u-p-t-20">
-		 	视频2
+		 	视频3
 		 </view>
 		 
 		  
@@ -16,7 +22,7 @@
 		   enable-danmu danmu-btn controls></video>
 		
 		<view class="u-p-t-20">
-			视频3
+			视频4
 		</view>
 		<video id="myVideo" :src="videoUrl3" @error="videoErrorCallback"
 		 enable-danmu danmu-btn controls></video>
@@ -31,6 +37,7 @@
 				videoUrl:'https://jx.iqfk.top/api/sjsp.php',
 				videoUrl2:'',
 				videoUrl3:'https://mnapi.cn/nvda.php?type=video',
+				videoUrl4:'https://api.walsm.cn/api/mnbz',
 			};
 		},
 		beforeCreated () {},
