@@ -6,9 +6,9 @@
 				<u-select v-model="show" :list="list5" @confirm="confirm"></u-select>
 			</u-form-item>
 		</u-form>
-		<u-input v-model="text" type="textarea"  placeholder="" :border="true" height="200" />
+		<u-input v-model="text" type="textarea" placeholder="" :border="true" height="200" />
 		<u-button @click="getApi" type="primary" class="u-m-t-20">下一句</u-button>
-		
+
 		<view class="u-m-30">
 			<view v-for="(item,index) in list" :key="index">
 				<view class="u-m-t-20">
@@ -17,7 +17,7 @@
 			</view>
 		</view>
 	</view>
-	
+
 </template>
 
 <script>
@@ -25,9 +25,9 @@
 		data() {
 			return {
 				form: {
-					id:'4',
-					idName:'古言语录',
-					type:'json'
+					id: '4',
+					idName: '古言语录',
+					type: 'json'
 				},
 				rules: {
 					name: [{
@@ -36,46 +36,103 @@
 						trigger: 'blur,change'
 					}]
 				},
-				text:'',
-				list:[],
+				text: '',
+				list: [],
 				show: false,
-				list5:[
-					{value: '1',label: '爱情语录'},
-					{value: '2',label: '傲娇语录'},
-					{value: '3',label: '毒鸡汤'},
-					{value: '4',label: '古言语录'},
-					{value: '5',label: '火星语录'},
-					{value: '6',label: '经典语录'},
-					{value: '7',label: '健康知识语录'},
-					{value: '8',label: '情诗语录'},
-					{value: '9',label: '情话语录'},
-					{value: '10',label: '人间语录'},
-					{value: '11',label: '人生话语'},
-					{value: '12',label: '伤感语录'},
-					{value: '13',label: '失恋语录'},
-					{value: '14',label: '舔狗语录'},
-					{value: '15',label: '温柔语录'},
-					{value: '16',label: '随机一言'},
-					{value: '17',label: '中英语录'},
-					{value: '18',label: '随机对联'},
+				list5: [{
+						value: '1',
+						label: '爱情语录'
+					},
+					{
+						value: '2',
+						label: '傲娇语录'
+					},
+					{
+						value: '3',
+						label: '毒鸡汤'
+					},
+					{
+						value: '4',
+						label: '古言语录'
+					},
+					{
+						value: '5',
+						label: '火星语录'
+					},
+					{
+						value: '6',
+						label: '经典语录'
+					},
+					{
+						value: '7',
+						label: '健康知识语录'
+					},
+					{
+						value: '8',
+						label: '情诗语录'
+					},
+					{
+						value: '9',
+						label: '情话语录'
+					},
+					{
+						value: '10',
+						label: '人间语录'
+					},
+					{
+						value: '11',
+						label: '人生话语'
+					},
+					{
+						value: '12',
+						label: '伤感语录'
+					},
+					{
+						value: '13',
+						label: '失恋语录'
+					},
+					{
+						value: '14',
+						label: '舔狗语录'
+					},
+					{
+						value: '15',
+						label: '温柔语录'
+					},
+					{
+						value: '16',
+						label: '随机一言'
+					},
+					{
+						value: '17',
+						label: '中英语录'
+					},
+					{
+						value: '18',
+						label: '随机对联'
+					},
 				],
 			};
 		},
-		beforeCreated () {},
-		beforeMounted () {},
-		beforeUpdated () {},
-		updated () {},
-		beforeDestroyed () {},
-		destroyed () {},
-		created () {},
-		mounted () {},
-		onShow(){
+		beforeCreated() {},
+		beforeMounted() {},
+		beforeUpdated() {},
+		updated() {},
+		beforeDestroyed() {},
+		destroyed() {},
+		created() {},
+		mounted() {},
+		onShow() {
 			this.getApi();
 		},
 		onReady() {
-					this.$refs.uForm.setRules(this.rules);
-				},
+			this.$refs.uForm.setRules(this.rules);
+		},
 		methods: {
+			confirm(e) {
+				this.form.id = e[0].value
+				this.form.idName = e[0].label
+			},
 			submit() {
 				this.$refs.uForm.validate(valid => {
 					if (valid) {
@@ -87,7 +144,9 @@
 			},
 			getApi() {
 				let that = this
-				uni.showLoading({title:'加载中...'})
+				uni.showLoading({
+					title: '加载中...'
+				})
 				uni.request({
 					url: 'https://www.hhlqilongzhu.cn/api/yl_juhe.php',
 					method: 'GET',
@@ -115,7 +174,7 @@
 				});
 			},
 		},
-		
+
 	}
 </script>
 

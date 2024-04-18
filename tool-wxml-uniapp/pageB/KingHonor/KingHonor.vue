@@ -6,7 +6,7 @@
 			</u-form-item>
 			<u-form-item label="游戏区" prop="type">
 				<u-input v-model="form.type" type="select" @click="show = true" />
-				<u-select v-model="show" :list="list" @confirm="confirm"></u-select>
+				<u-select v-model="show" :list="list2" @confirm="confirm"></u-select>
 			</u-form-item>
 			<u-button @click="submit" type="primary">搜索</u-button>
 		</u-form>
@@ -23,7 +23,6 @@
 </template>
 
 <script>
-import { log } from 'util';
 	export default {
 		data() {
 			return {
@@ -36,7 +35,7 @@ import { log } from 'util';
 				//https://www.hhlqilongzhu.cn/api/wzcx_zhanli.php?msg=阿轲&type=ios_qq&king=image&moban=1
 				imageUrl:'',
 				show: false,
-				list: [{
+				list2: [{
 						value: 'qq',
 						label: '安卓QQ'
 					},

@@ -83,6 +83,7 @@
 							mask: true,
 							duration: 2000
 						});
+						uni.hideLoading();
 					},
 					complete() {},
 				});

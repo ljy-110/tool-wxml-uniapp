@@ -76,7 +76,16 @@
         "vehicleInfo/vehicleInfo",
         "companyInfo/companyInfo",
         "funnyCrossTalk/funnyCrossTalk",
-        "currencyConversion/currencyConversion"
+        "currencyConversion/currencyConversion",
+        "reasonIntention/reasonIntention",
+        "historicalFigures/historicalFigures",
+        "historicalFiguresInfo/historicalFiguresInfo",
+        "bank/bank",
+        "ancientPoetry/ancientPoetry",
+        "kingImage/kingImage",
+        "kingVoice/kingVoice",
+        "kingCosplay/kingCosplay",
+        "lovePicture/lovePicture"
       ]
     }
   ],

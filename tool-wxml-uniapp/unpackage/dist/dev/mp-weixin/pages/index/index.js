@@ -372,7 +372,33 @@ var _default = {
         name: '汇率换算',
         icon: 'rmb-circle',
         router: '/pageC/currencyConversion/currencyConversion'
-      }],
+      }, {
+        id: '50',
+        name: '银行大全',
+        icon: 'rmb-circle',
+        router: '/pageC/bank/bank'
+      }, {
+        id: '50',
+        name: '王者图集',
+        icon: 'photo',
+        router: '/pageC/kingImage/kingImage'
+      }, {
+        id: '500',
+        name: '英雄语音',
+        icon: 'volume',
+        router: '/pageC/kingVoice/kingVoice'
+      }, {
+        id: '50',
+        name: '王者Cosplay',
+        icon: 'photo',
+        router: '/pageC/kingCosplay/kingCosplay'
+      }
+      // {
+      // 	id:'500',name:'图片',icon:'photo',
+      // 	router:'/pageC/lovePicture/lovePicture'
+      // },
+      ],
+
       menuList: [],
       address: '天河区',
       WeatherInfo: {},

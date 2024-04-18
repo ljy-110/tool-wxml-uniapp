@@ -284,6 +284,21 @@ var _default = {
         name: '开心一刻',
         icon: 'file-text',
         router: '/pageC/funnyCrossTalk/funnyCrossTalk'
+      }, {
+        id: '60',
+        name: '据意查句',
+        icon: 'file-text',
+        router: '/pageC/reasonIntention/reasonIntention'
+      }, {
+        id: '60',
+        name: '历史人物',
+        icon: 'clock',
+        router: '/pageC/historicalFigures/historicalFigures'
+      }, {
+        id: '60',
+        name: '随机古诗词',
+        icon: 'file-text',
+        router: '/pageC/ancientPoetry/ancientPoetry'
       }],
       menuList: []
     };

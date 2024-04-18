@@ -590,6 +590,78 @@
 					"navigationBarTitleText" : "货币转换",
 					"enablePullDownRefresh" : false
 				}
+			},
+			{
+				"path" : "reasonIntention/reasonIntention",
+				"style" : 
+				{
+					"navigationBarTitleText" : "据意查句",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "historicalFigures/historicalFigures",
+				"style" : 
+				{
+					"navigationBarTitleText" : "历史人物",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "historicalFiguresInfo/historicalFiguresInfo",
+				"style" : 
+				{
+					"navigationBarTitleText" : "历史人物详情",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "bank/bank",
+				"style" : 
+				{
+					"navigationBarTitleText" : "银行大全",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "ancientPoetry/ancientPoetry",
+				"style" : 
+				{
+					"navigationBarTitleText" : "随机古诗词",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "kingImage/kingImage",
+				"style" : 
+				{
+					"navigationBarTitleText" : "王者英雄图集",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "kingVoice/kingVoice",
+				"style" : 
+				{
+					"navigationBarTitleText" : "王者语音",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "kingCosplay/kingCosplay",
+				"style" : 
+				{
+					"navigationBarTitleText" : "王者cosplay",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "lovePicture/lovePicture",
+				"style" : 
+				{
+					"navigationBarTitleText" : "图片",
+					"enablePullDownRefresh" : false
+				}
 			}]
 		}
 	]

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "王者英雄图集",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "u-search": "/uni_modules/uview-ui/components/u-search/u-search"
+  }
+}

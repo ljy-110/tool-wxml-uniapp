@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "据意查句",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "u-form": "/uni_modules/uview-ui/components/u-form/u-form",
+    "u-form-item": "/uni_modules/uview-ui/components/u-form-item/u-form-item",
+    "u-input": "/uni_modules/uview-ui/components/u-input/u-input",
+    "u-select": "/uni_modules/uview-ui/components/u-select/u-select",
+    "u-button": "/uni_modules/uview-ui/components/u-button/u-button",
+    "u-empty": "/uni_modules/uview-ui/components/u-empty/u-empty"
+  }
+}

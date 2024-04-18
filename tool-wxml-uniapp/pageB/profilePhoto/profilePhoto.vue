@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import { log } from 'util';
 	export default {
 		data() {
 			return {

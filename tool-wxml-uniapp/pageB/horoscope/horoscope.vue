@@ -1,7 +1,7 @@
 <template>
 	<view click="u-p-20">
 		<view class="u-p-t-20 center" v-if="imageUrl">
-			<image :src="imageUrl" mode="aspectFit" @click="openImg(imageUrl)"></image>
+			<image :src="imageUrl" mode="aspectFit" class="img-box" @click="openImg(imageUrl)"></image>
 		</view>
 		<!-- <view class="u-p-20 ">
 			<u-button type="primary" @click="refreshPage()">换一卦</u-button>
@@ -59,5 +59,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+.img-box{
+	height: 400px;
+}
 </style>

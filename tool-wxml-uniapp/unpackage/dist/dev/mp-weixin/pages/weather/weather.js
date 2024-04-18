@@ -433,7 +433,7 @@ var _default = {
           };
           that.latitude = res.latitude;
           that.longitude = res.longitude;
-          // console.log(res);
+          console.log(res);
           // that.getAddress(res.latitude,res.longitude)
         }
       });
