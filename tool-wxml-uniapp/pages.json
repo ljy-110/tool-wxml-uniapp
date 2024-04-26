@@ -662,6 +662,14 @@
 					"navigationBarTitleText" : "图片",
 					"enablePullDownRefresh" : false
 				}
+			},
+			{
+				"path" : "dailyEnglish/dailyEnglish",
+				"style" : 
+				{
+					"navigationBarTitleText" : "每日英语",
+					"enablePullDownRefresh" : false
+				}
 			}]
 		}
 	]
