@@ -200,6 +200,26 @@
 					// 	id:'500',name:'图片',icon:'photo',
 					// 	router:'/pageC/lovePicture/lovePicture'
 					// },
+					{
+						id:'500',name:'AI绘制图',icon:'photo',
+						router:'/pageC/aiDraw/aiDraw'
+					},
+					{
+						id:'50',name:'二次元',icon:'photo',
+						router:'/pageC/quadraticElement/quadraticElement'
+					},
+					{
+						id:'500',name:'手机图片',icon:'photo',
+						router:'/pageC/mobileGirl/mobileGirl'
+					},
+					{
+						id:'50',name:'车标查询',icon:'car',
+						router:'/pageC/carLogoInquiry/carLogoInquiry'
+					},
+					{
+						id:'50',name:'搜图',icon:'photo',
+						router:'/pageC/mapSearching/mapSearching'
+					},
 				],
 				menuList:[],
 				address:'天河区',

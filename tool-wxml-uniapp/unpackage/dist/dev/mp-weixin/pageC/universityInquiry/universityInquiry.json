@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "大学查询",
+  "usingComponents": {
+    "u-search": "/uni_modules/uview-ui/components/u-search/u-search",
+    "u-cell-group": "/uni_modules/uview-ui/components/u-cell-group/u-cell-group",
+    "u-cell-item": "/uni_modules/uview-ui/components/u-cell-item/u-cell-item"
+  }
+}

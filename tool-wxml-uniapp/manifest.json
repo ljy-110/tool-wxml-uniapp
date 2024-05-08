@@ -53,7 +53,9 @@
         "appid" : "wx73013e661a9ac70f",
         "setting" : {
             "urlCheck" : false,
-            "minified" : false
+            "minified" : true,
+            "es6" : true,
+            "postcss" : true
         },
         "usingComponents" : true,
         "permission" : {
@@ -61,9 +63,9 @@
                 "desc" : "获取地方天气"
             }
         },
-		"__usePrivacyCheck__" : true,
-		"resizable" : false,
-		"requiredPrivateInfos" : [ "getLocation", "chooseLocation" ]
+        "__usePrivacyCheck__" : true,
+        "resizable" : false,
+        "requiredPrivateInfos" : [ "getLocation", "chooseLocation" ]
     },
     "mp-alipay" : {
         "usingComponents" : true

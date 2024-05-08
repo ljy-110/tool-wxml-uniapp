@@ -24,7 +24,8 @@
 	export default {
 		data() {
 			return {
-				list: [{
+				list: [
+					{
 						"id": "",
 						"urlName": "我的世界SRV解析还原",
 						"urlPath": "https://api.imzzh.cn/minecraft-srv/?domain=100mc.cc",
@@ -189,6 +190,7 @@
 					withCredentials: false,
 					firstIpv4: false,
 					success(res) {
+						that.list = []
 						if (res.data.code == 200) {
 							let data = res.data.data.entityList.records
 							that.list = that.list.concat(data);

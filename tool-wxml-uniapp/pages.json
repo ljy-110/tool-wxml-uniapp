@@ -670,6 +670,48 @@
 					"navigationBarTitleText" : "每日英语",
 					"enablePullDownRefresh" : false
 				}
+			},
+			{
+				"path" : "aiDraw/aiDraw",
+				"style" : 
+				{
+					"navigationBarTitleText" : "AI绘制图"
+				}
+			},
+			{
+				"path" : "quadraticElement/quadraticElement",
+				"style" : 
+				{
+					"navigationBarTitleText" : "二次元"
+				}
+			},
+			{
+				"path" : "mobileGirl/mobileGirl",
+				"style" : 
+				{
+					"navigationBarTitleText" : "手机图片"
+				}
+			},
+			{
+				"path" : "carLogoInquiry/carLogoInquiry",
+				"style" : 
+				{
+					"navigationBarTitleText" : "车标查询"
+				}
+			},
+			{
+				"path" : "universityInquiry/universityInquiry",
+				"style" : 
+				{
+					"navigationBarTitleText" : "大学查询"
+				}
+			},
+			{
+				"path" : "mapSearching/mapSearching",
+				"style" : 
+				{
+					"navigationBarTitleText" : "搜图"
+				}
 			}]
 		}
 	]

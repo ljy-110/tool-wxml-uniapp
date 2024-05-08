@@ -2,10 +2,7 @@
   "navigationBarTitleText": "星座运势",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "u-form": "/uni_modules/uview-ui/components/u-form/u-form",
-    "u-form-item": "/uni_modules/uview-ui/components/u-form-item/u-form-item",
-    "u-input": "/uni_modules/uview-ui/components/u-input/u-input",
-    "u-button": "/uni_modules/uview-ui/components/u-button/u-button",
+    "u-search": "/uni_modules/uview-ui/components/u-search/u-search",
     "u-cell-group": "/uni_modules/uview-ui/components/u-cell-group/u-cell-group",
     "u-cell-item": "/uni_modules/uview-ui/components/u-cell-item/u-cell-item"
   }

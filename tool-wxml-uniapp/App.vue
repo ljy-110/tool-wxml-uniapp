@@ -21,7 +21,7 @@
 					'Cache-Control': 'no-cache'
 				},
 				success(res) {
-					console.log(res);
+					// console.log(res);
 					if (res.data.success) {
 						uni.setStorageSync('wx_shenhe', res.data.data.wx_shenhe);// 0开启、1关闭
 						uni.showToast({
@@ -30,19 +30,64 @@
 							mask: true,
 							duration: 2000
 						});
+					}else{
+						that.getWxshenhe()
 					}
 					uni.hideLoading();
 				},
 				fail(err) {
-					uni.showToast({
-						title: '获取失败！',
-						icon: 'error',
-						mask: true,
-						duration: 2000
-					});
+					that.getWxshenhe()
+					// uni.showToast({
+					// 	title: '获取失败！',
+					// 	icon: 'error',
+					// 	mask: true,
+					// 	duration: 2000
+					// });
 				},
 				complete() {},
 			});
+		},
+		methods: {
+			getWxshenhe(){
+				uni.request({
+					url: 'https://smz.gzszjj.com:8008/wechat/loginRest/systemConfig/3',
+					dataType: "json",
+					// responseType: "json",
+					method: 'GET',
+					data: {},
+					timeout: 6000,
+					sslVerify: false,
+					withCredentials: false,
+					firstIpv4: false,
+					headers:{
+						'Cache-Control': 'no-cache'
+					},
+					success(res) {
+						// console.log(res);
+						if (res.data.success) {
+							uni.setStorageSync('wx_shenhe', res.data.data.wx_shenhe);// 0开启、1关闭
+							uni.showToast({
+								title: '欢迎您'+res.data.data.wx_shenhe,
+								icon: 'none',
+								mask: true,
+								duration: 2000
+							});
+						}else{
+							
+						}
+						uni.hideLoading();
+					},
+					fail(err) {
+						uni.showToast({
+							title: '获取失败！',
+							icon: 'error',
+							mask: true,
+							duration: 2000
+						});
+					},
+					complete() {},
+				});
+			}
 		},
 		onHide: function() {
 		}

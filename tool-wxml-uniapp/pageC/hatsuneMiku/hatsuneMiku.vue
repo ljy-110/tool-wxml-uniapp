@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="u-p-t-20 center">
-			<image :src="imageUrl" mode="aspectFit" @click="openImg(imageUrl)"></image>
+			<image :src="imageUrl" style="width: 100%;" mode="widthFix" @click="openImg(imageUrl)"></image>
 		</view>
 	</view>
 </template>

@@ -48,6 +48,10 @@
 						router: '/pageB/proverb/proverb'
 					},
 					{
+						id:'60',name:'大学查询',icon:'heart-fill',
+						router:'/pageC/universityInquiry/universityInquiry'
+					},
+					{
 						id: '23',
 						name: '成语学习',
 						icon: 'order',
@@ -161,6 +165,11 @@
 						id:'60',name:'随机古诗词',icon:'file-text',
 						router:'/pageC/ancientPoetry/ancientPoetry'
 					},
+					{
+						id:'60',name:'每日英语',icon:'file-text',
+						router:'/pageC/dailyEnglish/dailyEnglish'
+					},
+					
 				],
 				menuList:[]
 			};

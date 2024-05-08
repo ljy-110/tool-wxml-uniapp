@@ -85,7 +85,14 @@
         "kingImage/kingImage",
         "kingVoice/kingVoice",
         "kingCosplay/kingCosplay",
-        "lovePicture/lovePicture"
+        "lovePicture/lovePicture",
+        "dailyEnglish/dailyEnglish",
+        "aiDraw/aiDraw",
+        "quadraticElement/quadraticElement",
+        "mobileGirl/mobileGirl",
+        "carLogoInquiry/carLogoInquiry",
+        "universityInquiry/universityInquiry",
+        "mapSearching/mapSearching"
       ]
     }
   ],

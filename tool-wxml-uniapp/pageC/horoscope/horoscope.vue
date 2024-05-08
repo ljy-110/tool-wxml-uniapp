@@ -1,11 +1,15 @@
 <template>
 	<view class="u-p-10">
-		<u-form :model="form" ref="uForm" label-width="150">
+		<view class="u-p-15">
+			<u-search placeholder="请输入" v-model="form.msg" :show-action="true" :clearabled="true" action-text="搜索"
+				:animation="true" @custom="submit"></u-search>
+		</view>
+		<!-- <u-form :model="form" ref="uForm" label-width="150">
 			<u-form-item label="星座" prop="msg">
 				<u-input v-model="form.msg" placeholder="请输入星座" />
 			</u-form-item>
 			<u-button @click="submit" type="primary">查询</u-button>
-		</u-form>
+		</u-form> -->
 		<view class="u-p-t-30">
 			
 		</view>
@@ -32,18 +36,18 @@
 					msg: '摩羯'
 				},
 				info:{},
-				rules: {
-					msg: [{
-						required: true,
-						message: '请输入星座',
-						trigger: 'blur,change'
-					}]
-				}
+				// rules: {
+				// 	msg: [{
+				// 		required: true,
+				// 		message: '请输入星座',
+				// 		trigger: 'blur,change'
+				// 	}]
+				// }
 			};
 		},
-		onReady() {
-			this.$refs.uForm.setRules(this.rules);
-		},
+		// onReady() {
+		// 	this.$refs.uForm.setRules(this.rules);
+		// },
 		beforeCreated() {},
 		beforeMounted() {},
 		beforeUpdated() {},
@@ -56,14 +60,16 @@
 			this.getApi();
 		},
 		methods: {
-			submit() {
-				this.$refs.uForm.validate(valid => {
-					if (valid) {
-						this.getApi();
-					} else {
-						console.log('验证失败');
-					}
-				});
+			submit(val) {
+				this.form.msg = val
+				this.getApi();
+				// this.$refs.uForm.validate(valid => {
+				// 	if (valid) {
+				// 		this.getApi();
+				// 	} else {
+				// 		console.log('验证失败');
+				// 	}
+				// });
 			},
 			getApi() {
 				let that = this

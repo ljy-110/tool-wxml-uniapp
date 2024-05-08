@@ -1,0 +1,1 @@
+<view class="data-v-08a1ddd6"><view class="u-p-t-20 center data-v-08a1ddd6"><image style="width:100%;" src="{{imageUrl}}" mode="widthFix" data-event-opts="{{[['tap',[['openImg',['$0'],['imageUrl']]]]]}}" bindtap="__e" class="data-v-08a1ddd6"></image></view></view>
