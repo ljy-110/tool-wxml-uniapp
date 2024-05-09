@@ -22,6 +22,11 @@
 			return {
 				list:[
 					{
+						title:'微信小程序云开发！',
+						url:'https://mp.weixin.qq.com/s/bRptbhqsUYx10gNugSJjig',
+						time:'2024-05-08 16:57'
+					},
+					{
 						title:'微信小程序如何巧妙嵌入H5页面！',
 						url:'https://mp.weixin.qq.com/s/pqsjOZ_bxm8ierycefFSQA',
 						time:'2024-04-04 09:00'

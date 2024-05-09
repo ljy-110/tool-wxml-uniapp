@@ -216,22 +216,7 @@
 							that.list = []
 							that.list.push(res.data[0].wangyiyunreping)
 							that.list.push(res.data[0].wangyiyunreping)
-						} else{
-							
 						}
-						
-						// uni.hideLoading();
-						// if (res.data.code == 200) {
-						// 	let parts = res.data.split('\n');
-						// 	that.info = res.data
-						// } else {
-						// 	uni.showToast({
-						// 		title: res.data.message,
-						// 		icon: 'error',
-						// 		mask: true,
-						// 		duration: 2000
-						// 	});
-						// }
 					},
 					fail(err) {
 						uni.showToast({

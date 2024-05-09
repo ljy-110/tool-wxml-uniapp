@@ -32,8 +32,13 @@
 			
 		</view>
 		
-		<view class="u-font-12 u-text-center u-p-20" style="color: #ccc;">
-			粤ICP备2024232287号
+		<view class="u-font-12 center u-p-20" style="color: #ccc;">
+			<view class="h-center">
+				<text class="u-m-r-8">粤ICP备2024232287号</text>
+				<u-line color="#82848a" margin="0 5rpx" length="25" direction="col" />
+				<text class="font14 color82848a u-m-l-8" @click="updateSystem">{{version}}</text>
+			</view>
+			
 		</view>
 	</view>
 </template>
@@ -224,10 +229,21 @@
 				menuList:[],
 				address:'天河区',
 				WeatherInfo:{},
-				wx_shenhe:null
+				wx_shenhe:null,
+				version:'2.0.2'
 			}
 		},
 		onLoad() {
+			// #ifdef MP-WEIXIN
+				// wx.getSystemInfo({
+				//   success (res) {
+				// 	console.log(res.platform)
+				//   }
+				// })
+			    const miniProgram  = wx.getAccountInfoSync();
+			    this.version = miniProgram.miniProgram.envVersion + '   '+ miniProgram.miniProgram.version;
+			    // console.log(miniProgram)
+			// #endif
 			this.getLocalIP();
 		},
 		onShow() {
@@ -335,7 +351,44 @@
 					url: '/pages/weather/weather'
 				});
 				console.log('ces');
-			}
+			},
+			updateSystem(){
+				const updateManager = wx.getUpdateManager()
+				
+				updateManager.onCheckForUpdate(function (res) {
+				  // 请求完新版本信息的回调
+				  console.log(res.hasUpdate)
+				  if (!res.hasUpdate) {
+				  	wx.showToast({
+				  		title: '已经是最新版本',
+				  		duration: 2000
+				  	})
+				  } else{
+				  	
+				  }
+				})
+				
+				updateManager.onUpdateReady(function () {
+				  wx.showModal({
+				    title: '更新提示',
+				    content: '新版本已经准备好，是否重启应用？',
+				    success: function (res) {
+				      if (res.confirm) {
+				        // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
+				        updateManager.applyUpdate()
+				      }
+				    }
+				  })
+				})
+				
+				updateManager.onUpdateFailed(function () {
+					wx.showToast({
+						title: '新版本下载失败',
+						icon: 'error',
+						duration: 2000
+					})
+				})
+			},
 		}
 	}
 </script>

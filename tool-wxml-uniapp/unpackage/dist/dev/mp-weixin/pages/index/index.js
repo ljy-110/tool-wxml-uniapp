@@ -103,6 +103,9 @@ try {
     uIcon: function () {
       return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-icon/u-icon */ "uni_modules/uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-icon/u-icon.vue */ 598))
     },
+    uLine: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/uview-ui/components/u-line/u-line */ "uni_modules/uview-ui/components/u-line/u-line").then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-line/u-line.vue */ 782))
+    },
   }
 } catch (e) {
   if (
@@ -158,12 +161,17 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
+/* WEBPACK VAR INJECTION */(function(wx, uni) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+//
+//
+//
+//
+//
 //
 //
 //
@@ -426,10 +434,20 @@ var _default = {
       menuList: [],
       address: '天河区',
       WeatherInfo: {},
-      wx_shenhe: null
+      wx_shenhe: null,
+      version: '2.0.2'
     };
   },
   onLoad: function onLoad() {
+    // wx.getSystemInfo({
+    //   success (res) {
+    // 	console.log(res.platform)
+    //   }
+    // })
+    var miniProgram = wx.getAccountInfoSync();
+    this.version = miniProgram.miniProgram.envVersion + '   ' + miniProgram.miniProgram.version;
+    // console.log(miniProgram)
+
     this.getLocalIP();
   },
   onShow: function onShow() {
@@ -538,11 +556,43 @@ var _default = {
         url: '/pages/weather/weather'
       });
       console.log('ces');
+    },
+    updateSystem: function updateSystem() {
+      var updateManager = wx.getUpdateManager();
+      updateManager.onCheckForUpdate(function (res) {
+        // 请求完新版本信息的回调
+        console.log(res.hasUpdate);
+        if (!res.hasUpdate) {
+          wx.showToast({
+            title: '已经是最新版本',
+            duration: 2000
+          });
+        } else {}
+      });
+      updateManager.onUpdateReady(function () {
+        wx.showModal({
+          title: '更新提示',
+          content: '新版本已经准备好，是否重启应用？',
+          success: function success(res) {
+            if (res.confirm) {
+              // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
+              updateManager.applyUpdate();
+            }
+          }
+        });
+      });
+      updateManager.onUpdateFailed(function () {
+        wx.showToast({
+          title: '新版本下载失败',
+          icon: 'error',
+          duration: 2000
+        });
+      });
     }
   }
 };
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 
