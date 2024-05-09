@@ -152,12 +152,15 @@ exports.default = void 0;
 //
 //
 //
+//
+//
 var _default = {
   data: function data() {
     return {
       list: [],
       nickName: '',
-      title: ''
+      title: '',
+      videoUrl4: ''
     };
   },
   beforeCreated: function beforeCreated() {},
@@ -170,7 +173,9 @@ var _default = {
   mounted: function mounted() {},
   onShow: function onShow() {
     this.getApi();
+    // this.getVideo();
   },
+
   methods: {
     openImg: function openImg(img) {
       uni.previewImage({
@@ -208,6 +213,47 @@ var _default = {
           // 		duration: 2000
           // 	});
           // }
+        },
+        fail: function fail(err) {
+          uni.showToast({
+            title: '获取失败！',
+            icon: 'error',
+            mask: true,
+            duration: 2000
+          });
+          uni.hideLoading();
+        },
+        complete: function complete() {}
+      });
+    },
+    videoErrorCallback: function videoErrorCallback(e) {},
+    getVideo: function getVideo() {
+      var that = this;
+      uni.showLoading({
+        title: '加载中...'
+      });
+      uni.request({
+        url: 'https://api.qvqa.cn/cos?type=json',
+        // dataType: "json",
+        // responseType: "json",
+        method: 'GET',
+        data: {},
+        timeout: 6000,
+        sslVerify: false,
+        withCredentials: false,
+        firstIpv4: false,
+        success: function success(res) {
+          if (res.data.code == 200) {
+            that.videoUrl4 = res.data.data.msg;
+            uni.hideLoading();
+          } else {
+            uni.showToast({
+              title: res.data.text,
+              icon: 'error',
+              mask: true,
+              duration: 2000
+            });
+          }
         },
         fail: function fail(err) {
           uni.showToast({

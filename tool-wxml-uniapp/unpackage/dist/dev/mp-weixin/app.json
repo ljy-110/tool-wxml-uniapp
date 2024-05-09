@@ -92,7 +92,9 @@
         "mobileGirl/mobileGirl",
         "carLogoInquiry/carLogoInquiry",
         "universityInquiry/universityInquiry",
-        "mapSearching/mapSearching"
+        "mapSearching/mapSearching",
+        "calendar/calendar",
+        "invoiceInformation/invoiceInformation"
       ]
     }
   ],

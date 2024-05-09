@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "发票信息",
+  "usingComponents": {
+    "u-search": "/uni_modules/uview-ui/components/u-search/u-search",
+    "u-icon": "/uni_modules/uview-ui/components/u-icon/u-icon"
+  }
+}

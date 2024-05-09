@@ -712,6 +712,20 @@
 				{
 					"navigationBarTitleText" : "搜图"
 				}
+			},
+			{
+				"path" : "calendar/calendar",
+				"style" : 
+				{
+					"navigationBarTitleText" : "日历"
+				}
+			},
+			{
+				"path" : "invoiceInformation/invoiceInformation",
+				"style" : 
+				{
+					"navigationBarTitleText" : "发票信息"
+				}
 			}]
 		}
 	]

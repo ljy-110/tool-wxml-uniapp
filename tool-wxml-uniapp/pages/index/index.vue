@@ -225,6 +225,10 @@
 						id:'50',name:'搜图',icon:'photo',
 						router:'/pageC/mapSearching/mapSearching'
 					},
+					{
+						id:'500',name:'发票信息',icon:'file-text',
+						router:'/pageC/invoiceInformation/invoiceInformation'
+					},
 				],
 				menuList:[],
 				address:'天河区',

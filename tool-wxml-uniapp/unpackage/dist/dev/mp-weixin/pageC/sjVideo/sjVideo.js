@@ -172,6 +172,17 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
@@ -179,7 +190,9 @@ var _default = {
       videoUrl: 'https://jx.iqfk.top/api/sjsp.php',
       videoUrl2: '',
       videoUrl3: 'https://mnapi.cn/nvda.php?type=video',
-      videoUrl4: 'https://api.walsm.cn/api/mnbz'
+      videoUrl4: 'https://api.walsm.cn/api/mnbz',
+      videoUrl5: 'https://api.yujn.cn/api/zzxjj.php?type=video',
+      videoUrl6: 'http://api.7645.cn/video/index.php?type=sex_video&id=1'
     };
   },
   beforeCreated: function beforeCreated() {},

@@ -1,12 +1,7 @@
 <template>
-	<view class="u-p-15">
-		<view v-for="(item,index) in list" :key="index">
-			<view class="flex item-box center">
-				<!-- <image :src="imgUrl + item.bank_code" class="image-box" mode="aspectFit"></image> -->
-				<u-image height="100px" class="" mode="widthFix" :src="imgUrl + item.bank_code"></u-image>
-				<text class="u-m-t-10 u-m-b-10 title-banck">{{item.bank_name}}</text>
-			</view>
-			
+	<view class="">
+		<view class="u-p-t-20 center" v-if="imageUrl">
+			<image :src="imageUrl" mode="widthFix" @click="openImg(imageUrl)"></image>
 		</view>
 	</view>
 </template>
@@ -15,8 +10,7 @@
 	export default {
 		data() {
 			return {
-				list:[],
-				imgUrl:'https://tools.mgtv100.com/external/v1/generate_bank_image?bankCode='
+				imageUrl:'https://xialiu.cn/api/dan/'
 			};
 		},
 		beforeCreated () {},
@@ -28,25 +22,32 @@
 		created () {},
 		mounted () {},
 		onShow(){
-			this.getApi();
+		},
+		onLoad(){
+			// this.getApi();
 		},
 		methods: {
+			openImg(img){
+				uni.previewImage({
+					urls:[img]
+				})
+			},
 			getApi() {
 				let that = this
 				uni.showLoading({title:'加载中...'})
 				uni.request({
-					url: 'https://tools.mgtv100.com/external/v1/bank_names',
+					url: 'https://dayu.qqsuu.cn/moyuribao/apis.php?type=json',
 					// dataType: "json",
 					// responseType: "json",
 					method: 'GET',
-					data: that.form,
+					data: {},
 					timeout: 6000,
 					sslVerify: false,
 					withCredentials: false,
 					firstIpv4: false,
 					success(res) {
 						if (res.data.code == 200) {
-							that.list = res.data.data
+							that.imageUrl = res.data.data
 							uni.hideLoading();
 						} else {
 							uni.showToast({
@@ -68,22 +69,12 @@
 					complete() {},
 				});
 			},
+			
 		},
 		
 	}
 </script>
 
 <style lang="scss" scoped>
-.image-box /deep/ .u-image{
-	height: 60px;
-}
-.item-box{
-	border: 1px #ccc solid;
-	border-radius: 8px;
-	box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
-	margin-bottom: 8px;
-}
-.title-banck{
-	font-weight: bold;
-}
+
 </style>

@@ -26,6 +26,17 @@
 		</view>
 		<video id="myVideo" :src="videoUrl3" @error="videoErrorCallback"
 		 enable-danmu danmu-btn controls></video>
+		 <view class="u-p-t-20">
+		 	视频5
+		 </view>
+		 <video id="myVideo" :src="videoUrl5" @error="videoErrorCallback"
+		  enable-danmu danmu-btn controls></video>
+		
+		<view class="u-p-t-20">
+			视频6
+		</view>
+		<video id="myVideo" :src="videoUrl6" @error="videoErrorCallback"
+		 enable-danmu danmu-btn controls></video>
 	</view>
 </template>
 
@@ -38,6 +49,8 @@
 				videoUrl2:'',
 				videoUrl3:'https://mnapi.cn/nvda.php?type=video',
 				videoUrl4:'https://api.walsm.cn/api/mnbz',
+				videoUrl5:'https://api.yujn.cn/api/zzxjj.php?type=video',
+				videoUrl6:'http://api.7645.cn/video/index.php?type=sex_video&id=1',
 			};
 		},
 		beforeCreated () {},

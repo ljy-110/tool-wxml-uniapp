@@ -8,6 +8,8 @@
 				<image :src="item" mode="widthFix" @click="openImg(item)"></image>
 			</view>
 		</view>
+		<!-- <video id="myVideo" :src="videoUrl4" @error="videoErrorCallback"
+		 enable-danmu danmu-btn controls></video> -->
 	</view>
 </template>
 
@@ -17,7 +19,8 @@
 			return {
 				list:[],
 				nickName:'',
-				title:''
+				title:'',
+				videoUrl4:''
 			};
 		},
 		beforeCreated () {},
@@ -30,6 +33,7 @@
 		mounted () {},
 		onShow(){
 			this.getApi();
+			// this.getVideo();
 		},
 		methods: {
 			openImg(img){
@@ -66,6 +70,45 @@
 						// 		duration: 2000
 						// 	});
 						// }
+					},
+					fail(err) {
+						uni.showToast({
+							title: '获取失败！',
+							icon: 'error',
+							mask: true,
+							duration: 2000
+						});
+						uni.hideLoading();
+					},
+					complete() {},
+				});
+			},
+			videoErrorCallback(e){},
+			getVideo() {
+				let that = this
+				uni.showLoading({title:'加载中...'})
+				uni.request({
+					url: 'https://api.qvqa.cn/cos?type=json',
+					// dataType: "json",
+					// responseType: "json",
+					method: 'GET',
+					data: {},
+					timeout: 6000,
+					sslVerify: false,
+					withCredentials: false,
+					firstIpv4: false,
+					success(res) {
+						if (res.data.code == 200) {
+							that.videoUrl4 = res.data.data.msg
+							uni.hideLoading();
+						} else {
+							uni.showToast({
+								title: res.data.text,
+								icon: 'error',
+								mask: true,
+								duration: 2000
+							});
+						}
 					},
 					fail(err) {
 						uni.showToast({

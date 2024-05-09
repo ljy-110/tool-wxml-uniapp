@@ -138,7 +138,7 @@
 						router:'/pageC/randomSpeech/randomSpeech'
 					},
 					{
-						id:'500',name:'签名设计',icon:'photo',
+						id:'50',name:'签名设计',icon:'photo',
 						router:'/pageC/signSeal/signSeal'
 					},
 					{
@@ -146,7 +146,7 @@
 						router:'/pageC/bookAnswers/bookAnswers'
 					},
 					{
-						id:'50',name:'菜谱大全',icon:'hourglass',
+						id:'500',name:'菜谱大全',icon:'hourglass',
 						router:'/pageC/cookbook/cookbook'
 					},
 					{
@@ -158,7 +158,7 @@
 						router:'/pageC/reasonIntention/reasonIntention'
 					},
 					{
-						id:'60',name:'历史人物',icon:'clock',
+						id:'500',name:'历史人物',icon:'clock',
 						router:'/pageC/historicalFigures/historicalFigures'
 					},
 					{
@@ -168,6 +168,10 @@
 					{
 						id:'60',name:'每日英语',icon:'file-text',
 						router:'/pageC/dailyEnglish/dailyEnglish'
+					},
+					{
+						id:'60',name:'日历',icon:'file-text',
+						router:'/pageC/calendar/calendar'
 					},
 					
 				],

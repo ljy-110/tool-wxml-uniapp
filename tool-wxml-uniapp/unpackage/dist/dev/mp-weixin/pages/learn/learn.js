@@ -270,7 +270,7 @@ var _default = {
         icon: 'volume-up',
         router: '/pageC/randomSpeech/randomSpeech'
       }, {
-        id: '500',
+        id: '50',
         name: '签名设计',
         icon: 'photo',
         router: '/pageC/signSeal/signSeal'
@@ -280,7 +280,7 @@ var _default = {
         icon: 'question',
         router: '/pageC/bookAnswers/bookAnswers'
       }, {
-        id: '50',
+        id: '500',
         name: '菜谱大全',
         icon: 'hourglass',
         router: '/pageC/cookbook/cookbook'
@@ -295,7 +295,7 @@ var _default = {
         icon: 'file-text',
         router: '/pageC/reasonIntention/reasonIntention'
       }, {
-        id: '60',
+        id: '500',
         name: '历史人物',
         icon: 'clock',
         router: '/pageC/historicalFigures/historicalFigures'
@@ -309,6 +309,11 @@ var _default = {
         name: '每日英语',
         icon: 'file-text',
         router: '/pageC/dailyEnglish/dailyEnglish'
+      }, {
+        id: '60',
+        name: '日历',
+        icon: 'file-text',
+        router: '/pageC/calendar/calendar'
       }],
       menuList: []
     };
